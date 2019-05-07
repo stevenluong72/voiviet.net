@@ -1,0 +1,124 @@
+// Header
+header {
+  nav {
+    top: 0;
+    a {
+      color: #d6d6d6;
+      padding: 1rem !important;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  header {
+    nav {
+      a {
+        img.logo-header {
+          height: 50px;
+        }
+      }
+      div.menu-horizontal {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  header {
+    nav {
+      a {
+        img.logo-header {
+          display: none;
+        }
+      }
+    }
+  }
+}
+// Curtain menu
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  right: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  display: flex;
+  align-items: center;
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  // margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  @include rfs(36);
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  @include rfs(60);
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    @include rfs(40);
+    top: 15px;
+    right: 35px;
+  }
+}
+/* Chỉnh lại position của nút <span> */
+header {
+  nav {
+    span {
+        @include rfs(24);
+      position: absolute;
+      right: 5%;
+      top: 10%;
+      color: #bbbbbb;
+      &:hover,
+      &:focus {
+        color: #f1f1f1;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  header {
+    nav {
+      span {
+        display: none;
+      }
+    }
+  }
+}
+// End curtain menu

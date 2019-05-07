@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="27px" viewBox="0 0 28 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>facebook</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="footer" transform="translate(-547.000000, -54.000000)">
+            <g id="Group-4">
+                <g transform="translate(363.000000, 24.000000)">
+                    <g id="Group-3" transform="translate(184.000000, 30.000000)">
+                        <g id="facebook">
+                            <rect id="Rectangle" x="0" y="0" width="28" height="27"></rect>
+                            <ellipse id="Oval" stroke="#FFFFFF" cx="14" cy="13.5" rx="13.5" ry="13"></ellipse>
+                            <path d="M14.6548127,21 L11.550972,21 L11.550972,13.9991164 L10,13.9991164 L10,11.5868468 L11.550972,11.5868468 L11.550972,10.1386014 C11.550972,8.1707902 12.4262684,7 14.9146515,7 L16.9857752,7 L16.9857752,9.41315324 L15.6913229,9.41315324 C14.7226174,9.41315324 14.658606,9.75025246 14.658606,10.3793865 L14.6543385,11.5868468 L17,11.5868468 L16.7254623,13.9991164 L14.6543385,13.9991164 L14.6543385,21 L14.6548127,21 Z" id="Shape" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,49 @@
+<!-- Menu from 992px up -->
+<nav class="navbar position-absolute w-100">
+  <a class="navbar-brand p-0" href="#">
+    <img class="logo-header" src="images/logo-header.svg" alt="logo-header" />
+  </a>
+
+  <div class="menu-horizontal">
+    <ul class="navbar-nav flex-row ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">CÂU CHUYỆN</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">DU LỊCH</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="films.html">PHIM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">MUA SẮM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">GIỚI THIỆU</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn p-0" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a href="#">
+      <img src="/images/logo-header.svg" alt="logo-header" />
+    </a>
+    <a href="#">CÂU CHUYỆN</a>
+    <a href="#">DU LỊCH</a>
+    <a href="films.html">PHIM</a>
+    <a href="#">MUA SẮM</a>
+    <a href="about.html">GIỚI THIỆU</a>
+  </div>
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<span onclick="openNav()">
+    <i class="fas fa-bars"></i>
+</span>
