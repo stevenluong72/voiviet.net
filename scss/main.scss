@@ -1,5 +1,4 @@
 // Import fonts
-
 @font-face {
   font-family: 'Chalkduster';
   src:url('fonts/Chalkduster.ttf') format('ttf');
@@ -7,18 +6,22 @@
   font-style: normal;
 }
 @import url('https://fonts.googleapis.com/css?family=Cormorant');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
 
 // RFS
-
-@import "../node_modules/rfs/scss";
+@import "../rfs/rfs.scss";
 
 // Additional Reset CSS & Global CSS
+html {
+  overflow-x: hidden;
+}
 
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   @include rfs(16);
   max-width: 1920px;
   margin: auto;
+  overflow-x: hidden;
 }
 
 // @media (max-width: 576px) {
@@ -45,6 +48,8 @@ img {
 }
 
 
+
+@import "tours";
 @import "films";
 @import "about";
 @import "menu";
