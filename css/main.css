@@ -649,7 +649,7 @@ footer img.footer-img-left-2 {
 }
 @media (max-width: 416px) {
   footer img.footer-img-right {
-    bottom: -30px;
+    bottom: -20px;
   }
 }
 @media (max-width: 354px) {
