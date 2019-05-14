@@ -40,21 +40,23 @@ img {
   position: relative;
 }
 .section1 .container .row .col-12 .star {
+  height: 30px;
   position: absolute;
+  cursor: pointer;
   opacity: 0.68;
 }
 .section1 .container .row .col-12 .star:hover {
   opacity: 1;
 }
 .section1 .container .row .col-12 .star-1 {
-  top: 31%;
-  left: 28%;
+  top: 31.5%;
+  left: 28.5%;
 }
 .section1 .container .row .col-12 .star-1:hover ~ .line-1, .section1 .container .row .col-12 .star-1:hover ~ .button-1 {
   display: block;
 }
 .section1 .container .row .col-12 .star-2 {
-  bottom: 3%;
+  bottom: 4%;
   right: 33%;
 }
 .section1 .container .row .col-12 .star-2:hover ~ .line-2, .section1 .container .row .col-12 .star-2:hover ~ .button-2 {
@@ -70,8 +72,8 @@ img {
   left: 32%;
 }
 .section1 .container .row .col-12 .button-2 {
-  bottom: 9%;
-  right: 14%;
+  top: 72%;
+  left: 72%;
 }
 .section1 .container .row .col-12 .line {
   position: absolute;
@@ -85,22 +87,39 @@ img {
   width: 9%;
 }
 .section1 .container .row .col-12 .line-2 {
-  transform: rotate(-24deg);
-  bottom: 11%;
-  right: 27%;
-  width: 7%;
+  transform: rotate(-38deg);
+  top: 84%;
+  left: 65%;
+  width: 9%;
 }
 
-.section2 .container .row .col-2 {
-  padding-right: 0;
+.section2 .container .row .ENP-logo {
+  padding-right: 15px;
+  padding-left: 15px;
 }
-.section2 .container .row .col-10 {
-  padding-left: 0;
+.section2 .container .row .ENP-logo img {
+  max-width: unset;
+}
+.section2 .container .row .YD-logo {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.section2 .container .row .ENP-name {
+  width: calc(100% - 116px - 15px * 2);
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.section2 .container .row .YD-name {
+  width: calc(100% - 103px - 15px * 2);
+  padding-left: 15px;
   display: flex;
   flex-direction: column;
   align-self: center;
 }
 .section2 .container .row .card {
+  height: 97%;
   margin-bottom: 1rem;
   font-family: "Lora", serif;
   background: rgba(216, 216, 216, 0.33);
@@ -108,12 +127,16 @@ img {
 .section2 .container .row .card:hover {
   box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.5);
 }
+.section2 .container .row .card .card-img-top {
+  z-index: 100;
+}
 .section2 .container .row .card .card-title {
   font-weight: bold;
 }
 .section2 .container .row .card a.btn {
   font-weight: bold;
   width: 100%;
+  z-index: 100;
 }
 .section2 .container .row .card a.btn-danger {
   background: #db4e60;
@@ -121,7 +144,44 @@ img {
 .section2 .container .row .card a.btn-success {
   background: #3f8a67;
 }
+.section2 .container .row .card a.btn-xanh-nhat {
+  background: #83a848;
+}
 
+@media (max-width: 768px) {
+  .section1 .container .row .col-12 .star {
+    height: 20px;
+  }
+  .section1 .container .row .col-12 .button {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .section1 .container .row .col-12 .star {
+    height: 15px;
+  }
+  .section1 .container .row .col-12 .star-1 {
+    top: 27%;
+    left: 29%;
+  }
+  .section1 .container .row .col-12 .star-2 {
+    bottom: 7%;
+  }
+  .section1 .container .row .col-12 .button {
+    font-size: 0.5rem;
+    padding: 0.1875rem 0.375rem;
+  }
+
+  .section2 .container .row .ENP-name .location,
+.section2 .container .row .YD-name .location {
+    display: block;
+  }
+  .section2 .container .row .ENP-name .location::before,
+.section2 .container .row .YD-name .location::before {
+    content: "\a";
+  }
+}
 header p.header-content {
   font-family: Chalkduster;
   color: white;

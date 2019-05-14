@@ -35,7 +35,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <p>
+            <p class="text-justify">
               Voi không thuộc về rạp xiếc hay các khu du lịch cưỡi voi. Vậy làm
               thế nào nếu muốn tiếp xúc với loài voi mà không làm tổn hại đến
               chúng?
@@ -61,56 +61,63 @@
         <div class="row">
           <div class="col-12">
             <img class="map" src="images/tours-map.svg" alt="tours-map" />
-            <img
-              class="star star-1"
-              src="images/tours-star.png"
-              height="30px"
-              alt="tours-star"
-            />
-            <img
-              class="star star-2"
-              src="images/tours-star.png"
-              height="30px"
-              alt="tours-star"
-            />
+            <a href="#ENP" class="star star-1">
+              <img src="images/tours-star.png" alt="tours-star" />
+            </a>
+            <div class="line line-1"></div>
             <button
               class="button button-1 btn btn-outline-danger text-dark bg-white font-weight-bold"
             >
               Elephant <br />
               Nature Park
             </button>
+
+            <a href="#YokDon" class="star star-2">
+                <img
+                src="images/tours-star.png"
+                alt="tours-star"
+              />
+            </a>
+            <div class="line line-2"></div>
             <button
               class="button button-2 btn btn-outline-danger text-dark bg-white font-weight-bold"
             >
               Vườn quốc gia <br />
               Yok Don
             </button>
-            <div class="line line-1"></div>
-            <div class="line line-2"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section2">
+    <section class="section2" id="ENP">
       <div class="container">
         <div class="row">
-          <div class="col-2">
-            <img src="images/tours-enp_logo.png" alt="tours-enp_logo" />
+          <div class="ENP-logo">
+            <img src="images/tours-enp_logo.png" height="103px" alt="tours-enp_logo" />
           </div>
-          <div class="col-10">
-            <hr class="border-left-0 border-right-0" style="width:100%;border: 2px solid #006636" />
+          <div class="ENP-name ml-auto">
+            <hr
+              class="border-left-0 border-right-0"
+              style="width:100%;border: 2px solid #006636"
+            />
             <p class="m-0">
-              <span class="font-weight-bold">ELEPHANT NATURE PARK</span>
-              &nbsp;
-              <span style="font-size:13px">Chiang Mai, Thái Lan</span>
+              <span class="font-weight-bold mr-1">ELEPHANT NATURE PARK</span>
+              <span class="location" style="font-size:13px">Chiang Mai, Thái Lan</span>
             </p>
           </div>
         </div>
         <div class="row">
-          <div class="col-12 mt-2">
-            <p class="text-justify">
-              <img class="float-right col-6 mt-n3 pr-0" src="images/tours-enp-video.png" alt="tours-enp-video" />
+          <div class="col-12 mt-2 text-justify">
+            <p class="">
+              <div class="position-relative float-right col-lg-6 col-md-8 col-12 pr-0 pl-0 ml-md-3 mb-3 mb-md-0">
+                  <img
+                  src="images/tours-enp-video.png"
+                  alt="tours-enp-video"
+                />
+                <iframe class="w-100 h-100 position-absolute" style="top:0;right:0" src="https://www.youtube.com/embed/VrZhTWcEv_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              
               Hơn cả một khu du lịch, Elephant Nature Park (ENP) là một dự án
               đặc biệt thành lập năm 1990 với sứ mệnh luôn luôn là một "thánh
               địa" (sanctuary) và trung tâm cứu trợ cho loài voi. Công viên cách
@@ -137,47 +144,203 @@
         <div class="row">
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="card">
-              <img src="images/tours-enp_tour1.png" class="card-img-top" alt="tours-enp_tour1" />
+              <img
+                src="images/tours-enp_tour1.png"
+                class="card-img-top"
+                alt="tours-enp_tour1"
+              />
               <div class="card-body">
                 <h5 class="card-title">TOUR THEO GIỜ</h5>
                 <p class="card-text">
-                  Bắt đầu từ 10AM, kết thúc lúc 3:30PM. Phù hợp với du khách tới trễ hoặc có ít thời gian thăm công viên. Du khách sẽ ngắm nhìn đàn voi tắm dưới dòng sông Mae Peng từ trên bờ.                </p>
+                  Bắt đầu từ 10AM, kết thúc lúc 3:30PM. Phù hợp với du khách tới
+                  trễ hoặc có ít thời gian thăm công viên. Du khách sẽ ngắm nhìn
+                  đàn voi tắm dưới dòng sông Mae Peng từ trên bờ.
+                </p>
               </div>
               <a href="#" class="btn btn-danger">ĐẶT TOUR</a>
             </div>
           </div>
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="card">
-              <img src="images/tours-enp_tour2.png" class="card-img-top" alt="tours-enp_tour2" />
+              <img
+                src="images/tours-enp_tour2.png"
+                class="card-img-top"
+                alt="tours-enp_tour2"
+              />
               <div class="card-body">
                 <h5 class="card-title">TOUR TRỌN NGÀY</h5>
                 <p class="card-text">
-                  Bắt đầu từ 7:40AM, kết thúc lúc 5:30PM. Tận hưởng trọn vẹn một ngày tại ENP. Ngắm nhìn đàn voi tắm sông, cho voi ăn, bữa trưa bổ dưỡng, xe đưa đón và nhiều dịch vụ khác.                </p>
+                  Bắt đầu từ 7:40AM, kết thúc lúc 5:30PM. Tận hưởng trọn vẹn một
+                  ngày tại ENP. Ngắm nhìn đàn voi tắm sông, cho voi ăn, bữa trưa
+                  bổ dưỡng, xe đưa đón và nhiều dịch vụ khác.
+                </p>
               </div>
               <a href="#" class="btn btn-success">ĐẶT TOUR</a>
             </div>
           </div>
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="card">
-              <img src="images/tours-enp_tour3.png" class="card-img-top" alt="tours-enp_tour3" />
+              <img
+                src="images/tours-enp_tour3.png"
+                class="card-img-top"
+                alt="tours-enp_tour3"
+              />
               <div class="card-body">
                 <h5 class="card-title">TOUR 2 NGÀY - 1 ĐÊM</h5>
                 <p class="card-text">
-                  Ngủ qua đêm tại công viên ở ngay gần đàn voi sẽ đem lại cho du khách một cảm giác mộc mạc, thôn quê vô cùng gần gùi. Có xe đưa đón tại khách sạn của du khách từ trung tâm thành phố.                </p>
+                  Ngủ qua đêm tại công viên ở ngay gần đàn voi sẽ đem lại cho du
+                  khách một cảm giác mộc mạc, thôn quê vô cùng gần gùi. Có xe
+                  đưa đón tại khách sạn của du khách từ trung tâm thành phố.
+                </p>
               </div>
               <a href="#" class="btn btn-danger">ĐẶT TOUR</a>
             </div>
           </div>
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="card">
-              <img src="images/tours-enp_tour4.png" class="card-img-top" alt="tours-enp_tour4" />
+              <img
+                src="images/tours-enp_tour4.png"
+                class="card-img-top"
+                alt="tours-enp_tour4"
+              />
               <div class="card-body">
                 <h5 class="card-title">TÌNH NGUYỆN VIÊN 7 NGÀY</h5>
                 <p class="card-text">
-                  Một cơ hội tuyệt vời để góp sức cho các hoạt dộng  bảo tồn của công viên. 7 ngày là một khoảng thời gian dài để thực sự sống như những người dân Chiang Mai. Thăm trường làng, buffet chay mỗi bữa v.v
+                  Một cơ hội tuyệt vời để góp sức cho các hoạt dộng bảo tồn của
+                  công viên. 7 ngày là một khoảng thời gian dài để thực sự sống
+                  như những người dân Chiang Mai. Thăm trường làng, buffet chay
+                  mỗi bữa v.v
                 </p>
               </div>
               <a href="#" class="btn btn-success">ĐẶT TOUR</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section2" id="YD">
+      <div class="container">
+        <div class="row">
+            <div class="YD-name mr-auto">
+                <hr
+                  class="border-left-0 border-right-0"
+                  style="width:100%;border: 2px solid #B8DD7D"
+                />
+                <p class="m-0 text-right">
+                  <span class="font-weight-bold" style="color: #484848">VƯỜN QUỐC GIA YOK DON</span>
+                  <span class="location ml-1" style="font-size:13px">Đắk Lắk, Việt Nam</span>
+                </p>
+              </div>
+          <div class="YD-logo">
+            <img src="images/tours-yd_logo.png" height="103px" alt="tours-yd_logo" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 mt-2 text-justify">
+            <p class="">
+              <div class="position-relative float-left col-lg-6 col-md-8 col-12 pl-0 pr-0 mr-md-3 mb-3 mb-md-0">
+                  <img
+                  src="images/tours-enp-video.png"
+                  alt="tours-enp-video"
+                />
+                <iframe class="w-100 h-100 position-absolute" style="top:0;left:0" src="https://www.youtube.com/embed/AKJ8G0dGAbQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              Vườn quốc gia Yok Don tự hào là tổ chức đầu tiên thay đổi mô hình du lịch thân thiện với voi tại Việt Nam. Tổ chức Animals Asia đã tài trợ cho Vườn quốc gia để chấm dứt việc cưỡi voi vẫn đang rất phổ biến tại Bản Đôn ngay gần đó. Những chú voi đầu tiên của dự án bao gồm Bun Khăm, Y'Khun, H'Non và Thông Ngân.
+              <br /><br />
+              Với lợi thế về diện tích hơn 115 nghìn ha rừng khộp, đây là nơi cư trú của cả một hệ sinh thái đa dạng. Du khách tới tham quan sẽ trải nghiệm cảm giác thám hiểm rừng sâu, lần tìm theo dấu vết của voi trong rừng, quan sát và có thêm nhiều kiến thức về tập tính của loài voi trong môi trường tự nhiên.
+              <br /><br />
+              Du khách có thể lựa chọn các tour trải nghiệm cùng voi nửa ngày/một ngày, tour ngắm chim rừng, tour cắm trại trekking qua đêm, đi thuyền trên dòng sông Serepok, đạp xe xuyên rừng và nhiều dịch vụ hấp dẫn khác.
+              <br /><br />
+              Hãy đắm mình vào thiên nhiên cùng muôn loài để cảm nhận được rõ hơn bản năng của con người!
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card">
+              <img
+                src="images/tours-yd_tour1.png"
+                class="card-img-top"
+                alt="tours-enp_tour1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">TOUR NỬA NGÀY</h5>
+                <p class="card-text">
+                    <i class="fas fa-clock"></i>&nbsp;&nbsp;&nbsp;2-2.5 tiếng
+                    <br>
+                    <i class="fas fa-money-bill-wave"></i>&nbsp;&nbsp;800,000VND/người
+                    <br>
+                    <i class="fas fa-user-plus"></i>&nbsp;&nbsp;600,000VND/người
+                    <br>
+                    (tối đa 5 người một nhóm)
+                </p>
+              </div>
+              <a href="#" class="btn btn-success btn-xanh-nhat">ĐẶT TOUR</a>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card">
+              <img
+                src="images/tours-yd_tour2.png"
+                class="card-img-top"
+                alt="tours-enp_tour2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">TOUR TRỌN NGÀY</h5>
+                <p class="card-text">
+                    <i class="fas fa-clock"></i>&nbsp;&nbsp;&nbsp;8 tiếng
+                    <br>
+                    <i class="fas fa-money-bill-wave"></i>&nbsp;&nbsp;1,400,000VND/người
+                    <br>
+                    <i class="fas fa-user-plus"></i>&nbsp;&nbsp;1,200,000VND/người.
+                    <br>
+                    (tối đa 5 người một nhóm)
+                    <br>
+                    Bao gồm bữa trưa picnic trong rừng.
+                </p>
+              </div>
+              <a href="#" class="btn btn-danger">ĐẶT TOUR</a>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card">
+              <img
+                src="images/tours-yd_tour3.png"
+                class="card-img-top"
+                alt="tours-enp_tour3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">ĐẠP XE TRONG RỪNG</h5>
+                <p class="card-text">
+                  Với 200km đường mòn, đây là nơi lý tưởng để du khách đạp xe địa hình tới Thác Phật, Thác Bảy Nhánh, hồ Drang Phok hay núi Yok Don. Nhớ lấy một tấm bản đồ miễn phí ở lễ tân trước khi thám hiểm nhé.
+                </p>
+              </div>
+              <a href="#" class="btn btn-success btn-xanh-nhat">ĐẶT TOUR</a>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card">
+              <img
+                src="images/tours-yd_tour4.png"
+                class="card-img-top"
+                alt="tours-enp_tour4"
+              />
+              <div class="card-body">
+                <h5 class="card-title">VÀ NHIỀU CHƯƠNG TRÌNH KHÁC...</h5>
+                <p class="card-text">
+                    - Ngắm chim rừng
+                    <br>
+                    - Cắm trại trekking qua đêm
+                    <br>
+                    - Đi thuyền trên sông Serepok
+                    <br>
+                    - Câu cá
+                    <br>
+                    - Lớp học nấu ăn
+                </p>
+              </div>
+              <a href="#" class="btn btn-danger">ĐẶT TOUR</a>
             </div>
           </div>
         </div>
