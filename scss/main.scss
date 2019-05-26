@@ -23,6 +23,7 @@ body {
   @include rfs(16);
   max-width: 1920px;
   margin: auto;
+  overflow-x: hidden;
 }
 
 // @media (max-width: 576px) {
