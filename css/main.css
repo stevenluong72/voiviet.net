@@ -600,6 +600,7 @@ section.shop .container .modal .modal-dialog .modal-content .modal-body .row .ri
   padding-bottom: 10px;
 }
 section.shop .container .modal .modal-dialog .modal-content .modal-body .row .right .content-wrap table td .decrease, section.shop .container .modal .modal-dialog .modal-content .modal-body .row .right .content-wrap table td .increase {
+  border: none;
   display: inline-block;
   width: 25px;
   height: 25px;
