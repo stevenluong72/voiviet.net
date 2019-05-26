@@ -115,8 +115,10 @@ for (let i = 0; i < products.length; i++) {
 
   htmlContent +=
     '<div class="mask flex-center" style="background: rgba(162,0,0,0.38);">';
-  htmlContent += '<div class="white-text d-flex w-100">';
+  htmlContent += '<div class="white-text d-flex align-items-center w-100">';
+  htmlContent += '<a href="' + products[i].link + '" target="_blank">';
   htmlContent += '<i class="fa fa-cart-plus" aria-hidden="true"></i>';
+  htmlContent += '</a>';
   htmlContent +=
     '<i id="detail" onclick="renderContent(' + i + ')" class="fas fa-info-circle" data-toggle="modal" data-target="#modalQuickView" aria-hidden="true"></i>';
   htmlContent += "</div>";
