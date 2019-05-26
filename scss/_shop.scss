@@ -1,0 +1,423 @@
+body#shop-html {
+  background-color: #f2f1f1;
+}
+
+section.hot-item {
+  .container {
+    .row {
+      .col-12 {
+        .col-md-8 {
+          margin-left: -15px;
+          .bd-example-2 {
+            .carousel-inner {
+              .carousel-caption {
+                background: rgba(0, 0, 0, 0.33);
+                top: 10%;
+                bottom: unset;
+                left: 0;
+                right: unset;
+                padding: 0.25rem 0.75rem;
+                p {
+                  margin-bottom: 0;
+                  @include rfs(20);
+                }
+              }
+            }
+            .carousel-control-next,
+            .carousel-control-prev {
+              background: rgba(0, 0, 0, 0.33);
+              top: 42%;
+              bottom: 42%;
+              width: 8%;
+              opacity: 1;
+              .carousel-control-prev-icon, .carousel-control-next-icon {
+                width:40px;
+                height:40px;
+              }
+            }
+            .carousel-indicators {
+              .active {
+                background-color: white;
+              }
+              li {
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                border: 1px solid white;
+                opacity: 1;
+                background-color: transparent;
+                margin-left: 1%;
+                margin-right: 1%;
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+section.shop {
+  font-family: "Lora", serif;
+  .container {
+    .row {
+      .col-md-3 {
+        white-space: nowrap;
+        ul {
+          overflow-x: auto;
+          font-weight: bold;
+          background-image: url("../images/shop-paper_background.png");
+          background-size: cover;
+          box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+          padding: 1rem;
+          top: 8px;
+          li {
+            &:last-child a {
+              padding-bottom: 0;
+            }
+            a {
+              color: black;
+              padding: 0 0 0.5rem 0;
+            }
+            .active {
+              color: #a20000;
+            }
+          }
+        }
+      }
+      .col-md-9 {
+        .row {
+          .underline {
+            position: relative;
+            margin: 3px;
+            &:hover,
+            &:focus,
+            &:active {
+              /* cursor: pointer;*/
+              &:after {
+                width: 100%;
+              }
+            }
+
+            &:after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: -7px;
+              height: 2px;
+              background-color: #a20000;
+              width: 0;
+              transition: width 0.25s;
+            }
+          }
+        }
+        .row {
+          margin-left: -11px;
+          margin-right: -11px;
+          .card-wrap {
+            padding-left: 11px;
+            padding-right: 11px;
+            .card {
+              height: 100%;
+              border-radius: unset;
+              border: none;
+              z-index: 100;
+              &:hover {
+                box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.5);
+              }
+              &:hover .mask {
+                opacity: 1;
+                transition: all 0.2s ease-in-out;
+              }
+              transition: all 0.2s ease-in-out;
+              transition-delay: 0.08s;
+              .overlay {
+                .mask {
+                  .d-flex {
+                    justify-content: space-evenly;
+                    i {
+                      cursor: pointer;
+                      font-size: 20px;
+                      color: #dcdcdc;
+                      &:hover {
+                        color: white;
+                      }
+                    }
+                  }
+                }
+              }
+              .card-body {
+                .card-text {
+                  color: #a20000;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .modal {
+      .modal-dialog {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .modal-content {
+          .modal-body {
+            padding: 0;
+            .row {
+              .left {
+                .carousel {
+                  height: 100%;
+                  padding: 4.5rem 3.5rem;
+                  .carousel-indicators {
+                    margin-bottom: 0;
+                    padding-right: 2.5rem;
+                    li {
+                      img {
+                        outline: 0.1em solid #b9b9b9;
+                      }
+                    }
+                  }
+                }
+              }
+              .right {
+                padding-right: 0;
+                background-image: url("../images/shop_paper-background-modal.png");
+                background-size: cover;
+                .fa-times {
+                  top: 2%;
+                  right: 2%;
+                  font-size: 28px;
+                  color: #404040;
+                  &:hover {
+                    color: #A21616;
+                  }
+                }
+                .content-wrap {
+                  padding-left: calc(3rem - 15px);
+                  .product-name {
+                    background: white;
+                    display: inline-block;
+                    padding: 1rem 1rem 1rem 2.5rem;
+                    margin-left: -2.5rem;
+                  }
+                  table {
+                    td {
+                      font-size: 1rem;
+                      padding-bottom: 10px;
+                      .decrease, .increase {
+                        display: inline-block;
+                        width: 25px;
+                        height: 25px;
+                        color: white;
+                        background-color: #A21616;
+                        border-radius: 4px;
+                        transform: translateY(1.5px);
+                      }
+                      .quantity {
+                        width: 44px;
+                        background-color: white;
+                        border-radius: 4px;
+                      }
+                      .price {
+                        color: #A21616;
+                        font-weight: bold;
+                        @include rfs(20);
+                      }
+                    }
+                  }
+
+                  button.mua-ngay {
+                    background-color: #A21616;
+                    padding: 0.5rem 0.75rem;
+                    background: #A21C1C;
+                    border-radius: 4px;
+                    a {
+                      color: white;
+                      @include rfs(20);
+                      font-weight: bold;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  section.hot-item {
+    .container {
+      .row {
+        .col-12 {
+          .col-md-8 {
+            .bd-example-2 {
+              .carousel {
+                .carousel-inner {
+                  .carousel-caption {
+                    padding: calc(0.25rem/3*2) calc(0.75rem/3*2);
+                    p {
+                      @include rfs(16);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  section.shop {
+    .container {
+      .row {
+        .col-md-9 {
+          .modal {
+            .modal-dialog {
+              .modal-content {
+                .modal-body {
+                  .row {
+                    .left {
+                      .carousel {
+                        padding: 3.5rem 2.5rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .modal {
+        .modal-dialog {
+          .modal-content {
+            .modal-body {
+              .row {
+                .right {
+                  .content-wrap {
+                    .product-name {
+                      background-color: transparent;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  section.hot-item {
+    .container {
+      .row {
+        .col-12 {
+          .col-md-8 {
+            margin-left: 0;
+            padding: 0 0 1rem !important;
+          }
+        }
+      }
+    }
+  }
+  section.shop {
+    .container {
+      .row {
+        .col-md-3 {
+          ul {
+            li {
+              padding-right: 1rem;
+              a {
+                padding-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575.98px) {
+  section.hot-item {
+    .container {
+      .row {
+        .col-12 {
+          .col-md-8 {
+            .bd-example-2 {
+              .carousel {
+                .carousel-inner {
+                  .carousel-caption {
+                    p {
+                      @include rfs(13);
+                    }
+                  }
+                }
+                .carousel-indicators {
+                  li {
+                    width: 10px;
+                    height: 10px;
+                  }
+                }
+                .carousel-control-next, .carousel-control-prev {
+                  .carousel-control-prev-icon, .carousel-control-next-icon {
+                    width:20px;
+                    height:20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  section.shop {
+    .container {
+      .row {
+        .col-md-9 {
+          .row {
+            .card-wrap {
+              .card {
+                .overlay {
+                  .mask {
+                    .d-flex {
+                      i {
+                        font-size: 30px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .modal {
+            .modal-dialog {
+              .modal-content {
+                .modal-body {
+                  .row {
+                    .left {
+                      .carousel {
+                        padding: 1.5rem 1.5rem 1.5rem 0.5rem;
+                        ol {
+                          padding-right: 1rem;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Đến phần làm responsive. Còn lại chỉ cần thêm data là xong.
+// Con voi bút chì ở footer bị lòi ra.

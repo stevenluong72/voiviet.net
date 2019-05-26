@@ -1,4 +1,10 @@
 footer {
+  a {
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
   background-color: black;
   color: white;
   position: relative;

@@ -105,8 +105,9 @@
         font-family: "Lora", serif;
         background: rgba(216, 216, 216, 0.33);
         &:hover {
-          box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.5);
         }
+        transition: 0.5s;
         .card-img-top {
           z-index: 100;
         }
@@ -180,10 +181,31 @@
         .YD-name {
           .location {
             display: block;
-            &::before {
-              content: "\A";
-            }
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .section2 {
+    .container {
+      .row {
+        .ENP-logo {
+          padding-right: 0.5rem;
+        }
+        .YD-logo {
+          padding-left: 0.5rem;
+        }
+        .ENP-name {
+          width: calc(100% - 116px - 0.75rem * 2);
+        }
+        .YD-name {
+          width: calc(100% - 103px - 0.75rem * 2);
+        }
+        #yokdon-ten {
+          display: block;
         }
       }
     }
