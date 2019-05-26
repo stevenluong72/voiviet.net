@@ -424,6 +424,7 @@ section .container .bd-example .carousel .carousel-inner .carousel-item iframe {
 }
 body#shop-html {
   background-color: #f2f1f1;
+  overflow-x: unset;
 }
 
 section.hot-item .container .row .col-12 .col-md-8 {
