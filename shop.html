@@ -4,7 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Xem Phim Tài Liệu</title>
+    <title>Mua Sắm</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-141201319-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-141201319-1");
+    </script>
   </head>
 
   <body id="shop-html" data-spy="scroll" data-target="#list" data-offset="10">
@@ -272,7 +286,7 @@
                             class="carousel-inner"
                             role="listbox"
                           >
-                            <div class="carousel-item active">
+                            <!-- <div class="carousel-item active">
                               <img
                                 class="d-block w-100"
                                 src="images/shop_modal-main.png"
@@ -299,7 +313,7 @@
                                 src="images/shop_tuongvoi-4.jpg"
                                 alt="Third slide"
                               />
-                            </div>
+                            </div> -->
                             <!--Controls-->
                             <a
                               class="carousel-control-prev"
@@ -347,14 +361,22 @@
                             <tr>
                               <td class="pr-3">Số lượng</td>
                               <td>
-                                <button class="decrease waves-effect waves-light">-</button>
+                                <button
+                                  class="decrease waves-effect waves-light"
+                                >
+                                  -
+                                </button>
                                 <div
                                   id="quantity"
                                   class="quantity d-inline-block text-center"
                                 >
                                   1
                                 </div>
-                                <button class="increase waves-effect waves-light">+</button>
+                                <button
+                                  class="increase waves-effect waves-light"
+                                >
+                                  +
+                                </button>
                               </td>
                             </tr>
                             <tr>

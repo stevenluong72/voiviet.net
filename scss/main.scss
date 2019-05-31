@@ -26,12 +26,6 @@ body {
   overflow-x: hidden;
 }
 
-// @media (max-width: 576px) {
-//   body {
-//     @include rfs(12);
-//   }
-// }
-
 ul {
   list-style: none;
   padding: 0;
@@ -43,7 +37,7 @@ img {
 }
 
 
-
+@import "home";
 @import "tours";
 @import "films";
 @import "shop";

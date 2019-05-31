@@ -30,6 +30,131 @@ img {
   max-height: 100%;
 }
 
+body {
+  background-color: #f6f6f6;
+}
+
+section.welcome .wrap p {
+  font-size: 1.375rem;
+  text-align: center;
+  font-family: Chalkduster;
+  top: 10%;
+  left: 0;
+  right: 0;
+}
+@media (max-width: 1200px) {
+  section.welcome .wrap p {
+    font-size: calc(1.2625rem + 0.15vw);
+  }
+}
+
+section.travel .container .row .col-12 .header p {
+  font-size: 1.5625rem;
+  font-family: Chalkduster;
+}
+@media (max-width: 1200px) {
+  section.travel .container .row .col-12 .header p {
+    font-size: calc(1.28125rem + 0.375vw);
+  }
+}
+section.travel .container .row .col-12 .header .line {
+  width: calc((100% - 469px - 32px) / 2);
+  height: 1px;
+  background-color: #a7a7a7;
+}
+section.travel .container .row.where {
+  font-family: Lora;
+  font-weight: bold;
+}
+section.travel .container .row.where .col-12 p {
+  color: white;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+section.travel .container .row.where .col-12 .p1 {
+  font-size: 2.5rem;
+  top: 26%;
+  line-height: 1.3;
+}
+@media (max-width: 1200px) {
+  section.travel .container .row.where .col-12 .p1 {
+    font-size: calc(1.375rem + 1.5vw);
+  }
+}
+section.travel .container .row.where .col-12 .p2 {
+  font-size: 1.25rem;
+  top: 55.2%;
+  line-height: 2;
+}
+section.travel .container .row.where .col-12 button {
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
+  font-weight: bold;
+  background-color: #d0021b !important;
+  border-radius: 4px;
+  top: 88%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.2s;
+  border: 1px solid white;
+}
+
+section.film .container .row .col-12 .header .line {
+  width: calc((100% - 458px - 32px) / 2);
+}
+
+section.shop .container .row .col-12 .header .line {
+  width: calc((100% - 365px - 32px) / 2);
+}
+section.shop .container .row .col-12 .carousel {
+  z-index: 1000;
+}
+section.shop .container .row .col-12 .carousel a.btn-floating {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.41);
+  border-radius: unset;
+}
+section.shop .container .row .col-12 .carousel a.prev {
+  left: -50px;
+}
+section.shop .container .row .col-12 .carousel a.next {
+  right: -50px;
+}
+section.shop .container .row .col-12 div a button {
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #d0021b !important;
+  padding: 0.25rem 1.5rem;
+  border-radius: 4px;
+}
+
+@media (max-width: 1024px) {
+  section.shop .container .row .col-12 .carousel a.btn-floating {
+    position: unset;
+    border-radius: 50%;
+  }
+  section.shop .container .row .col-12 .carousel a.prev {
+    float: left;
+  }
+  section.shop .container .row .col-12 .carousel a.next {
+    float: right;
+  }
+}
+@media (max-width: 991.98px) {
+  section.welcome .wrap p {
+    position: unset !important;
+    margin-bottom: -7%;
+  }
+  section.welcome .wrap .sun {
+    width: 8%;
+    opacity: 0.35;
+    transform: translateY(100%);
+  }
+}
 .section1 .container .row .col-12 .map {
   position: relative;
 }
@@ -451,7 +576,8 @@ section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel-contr
   width: 8%;
   opacity: 1;
 }
-section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel-control-next .carousel-control-prev-icon, section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel-control-next .carousel-control-next-icon,
+section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel-control-next .carousel-control-prev-icon,
+section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel-control-next .carousel-control-next-icon,
 section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel-control-prev .carousel-control-prev-icon,
 section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel-control-prev .carousel-control-next-icon {
   width: 40px;
@@ -525,7 +651,8 @@ section.shop .container .row .col-md-9 .row .card-wrap {
   padding-left: 11px;
   padding-right: 11px;
 }
-section.shop .container .row .col-md-9 .row .card-wrap .card {
+
+.card {
   height: 100%;
   border-radius: unset;
   border: none;
@@ -533,119 +660,130 @@ section.shop .container .row .col-md-9 .row .card-wrap .card {
   transition: all 0.2s ease-in-out;
   transition-delay: 0.08s;
 }
-section.shop .container .row .col-md-9 .row .card-wrap .card:hover {
+.card:hover {
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
-section.shop .container .row .col-md-9 .row .card-wrap .card:hover .mask {
+.card:hover .mask {
   opacity: 1;
   transition: all 0.2s ease-in-out;
 }
-section.shop .container .row .col-md-9 .row .card-wrap .card .overlay .mask .d-flex {
+.card .overlay .mask .d-flex {
   justify-content: space-evenly;
 }
-section.shop .container .row .col-md-9 .row .card-wrap .card .overlay .mask .d-flex i {
+.card .overlay .mask .d-flex i {
   cursor: pointer;
   font-size: 20px;
   color: #dcdcdc;
 }
-section.shop .container .row .col-md-9 .row .card-wrap .card .overlay .mask .d-flex i:hover {
+.card .overlay .mask .d-flex i:hover {
   color: white;
 }
-section.shop .container .row .col-md-9 .row .card-wrap .card .card-body .card-text {
+.card .card-body .card-text {
   color: #a20000;
   font-weight: bold;
 }
-section.shop .container .modal .modal-dialog {
+
+.modal .modal-dialog {
   height: 100%;
   display: flex;
   align-items: center;
 }
-section.shop .container .modal .modal-dialog .modal-content .modal-body {
+.modal .modal-dialog .modal-content .modal-body {
   padding: 0;
 }
-section.shop .container .modal .modal-dialog .modal-content .modal-body .row .left .carousel {
+.modal .modal-dialog .modal-content .modal-body .row .left .carousel {
   height: 100%;
   padding: 4.5rem 3.5rem;
 }
-section.shop .container .modal .modal-dialog .modal-content .modal-body .row .left .carousel .carousel-indicators {
+.modal .modal-dialog .modal-content .modal-body .row .left .carousel .carousel-indicators {
   margin-bottom: 0;
   padding-right: 2.5rem;
 }
-section.shop .container .modal .modal-dialog .modal-content .modal-body .row .left .carousel .carousel-indicators li img {
+.modal .modal-dialog .modal-content .modal-body .row .left .carousel .carousel-indicators li img {
   outline: 0.1em solid #b9b9b9;
 }
-section.shop .container .modal .modal-dialog .modal-content .modal-body .row .right {
+.modal .modal-dialog .modal-content .modal-body .row .right {
   padding-right: 0;
   background-image: url("../images/shop_paper-background-modal.png");
   background-size: cover;
 }
-section.shop .container .modal .modal-dialog .modal-content .modal-body .row .right .fa-times {
+.modal .modal-dialog .modal-content .modal-body .row .right .fa-times {
   top: 2%;
   right: 2%;
   font-size: 28px;
   color: #404040;
 }
-section.shop .container .modal .modal-dialog .modal-content .modal-body .row .right .fa-times:hover {
-  color: #A21616;
+.modal .modal-dialog .modal-content .modal-body .row .right .fa-times:hover {
+  color: #a21616;
 }
-section.shop .container .modal .modal-dialog .modal-content .modal-body .row .right .content-wrap {
+.modal .modal-dialog .modal-content .modal-body .row .right .content-wrap {
   padding-left: calc(3rem - 15px);
 }
-section.shop .container .modal .modal-dialog .modal-content .modal-body .row .right .content-wrap .product-name {
+.modal .modal-dialog .modal-content .modal-body .row .right .content-wrap .product-name {
   background: white;
   display: inline-block;
   padding: 1rem 1rem 1rem 2.5rem;
   margin-left: -2.5rem;
 }
-section.shop .container .modal .modal-dialog .modal-content .modal-body .row .right .content-wrap table td {
+.modal .modal-dialog .modal-content .modal-body .row .right .content-wrap table td {
   font-size: 1rem;
   padding-bottom: 10px;
 }
-section.shop .container .modal .modal-dialog .modal-content .modal-body .row .right .content-wrap table td .decrease, section.shop .container .modal .modal-dialog .modal-content .modal-body .row .right .content-wrap table td .increase {
+.modal .modal-dialog .modal-content .modal-body .row .right .content-wrap table td .decrease,
+.modal .modal-dialog .modal-content .modal-body .row .right .content-wrap table td .increase {
   border: none;
   display: inline-block;
   width: 25px;
   height: 25px;
   color: white;
-  background-color: #A21616;
+  background-color: #a21616;
   border-radius: 4px;
   transform: translateY(1.5px);
 }
-section.shop .container .modal .modal-dialog .modal-content .modal-body .row .right .content-wrap table td .quantity {
+.modal .modal-dialog .modal-content .modal-body .row .right .content-wrap table td .quantity {
   width: 44px;
   background-color: white;
   border-radius: 4px;
 }
-section.shop .container .modal .modal-dialog .modal-content .modal-body .row .right .content-wrap table td .price {
-  color: #A21616;
+.modal .modal-dialog .modal-content .modal-body .row .right .content-wrap table td .price {
+  color: #a21616;
   font-weight: bold;
   font-size: 1.25rem;
 }
-section.shop .container .modal .modal-dialog .modal-content .modal-body .row .right .content-wrap button.mua-ngay {
-  background-color: #A21616;
-  padding: 0.5rem 0.75rem;
-  background: #A21C1C;
+.modal .modal-dialog .modal-content .modal-body .row .right .content-wrap button.mua-ngay {
+  background-color: #a21616;
+  padding: 0.125rem 0.5rem;
+  background: #a21c1c;
   border-radius: 4px;
 }
-section.shop .container .modal .modal-dialog .modal-content .modal-body .row .right .content-wrap button.mua-ngay a {
+.modal .modal-dialog .modal-content .modal-body .row .right .content-wrap button.mua-ngay a {
   color: white;
   font-size: 1.25rem;
   font-weight: bold;
 }
 
 @media (max-width: 991.98px) {
+  .modal .modal-dialog .modal-content .modal-body .row .left .carousel {
+    padding: 3.5rem 2.5rem;
+  }
+  .modal .modal-dialog .modal-content .modal-body .row .right .content-wrap .product-name {
+    background-color: transparent;
+  }
+}
+@media (max-width: 575.98px) {
+  .modal .modal-dialog .modal-content .modal-body .row .left .carousel {
+    padding: 1.5rem 1.5rem 1.5rem 0.5rem;
+  }
+  .modal .modal-dialog .modal-content .modal-body .row .left .carousel ol {
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 991.98px) {
   section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel .carousel-inner .carousel-caption {
-    padding: calc(0.25rem/3*2) calc(0.75rem/3*2);
+    padding: calc(0.25rem / 3 * 2) calc(0.75rem / 3 * 2);
   }
   section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel .carousel-inner .carousel-caption p {
     font-size: 1rem;
-  }
-
-  section.shop .container .row .col-md-9 .modal .modal-dialog .modal-content .modal-body .row .left .carousel {
-    padding: 3.5rem 2.5rem;
-  }
-  section.shop .container .modal .modal-dialog .modal-content .modal-body .row .right .content-wrap .product-name {
-    background-color: transparent;
   }
 }
 @media (max-width: 767.98px) {
@@ -669,19 +807,16 @@ section.shop .container .modal .modal-dialog .modal-content .modal-body .row .ri
     width: 10px;
     height: 10px;
   }
-  section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel .carousel-control-next .carousel-control-prev-icon, section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel .carousel-control-next .carousel-control-next-icon, section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel .carousel-control-prev .carousel-control-prev-icon, section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel .carousel-control-prev .carousel-control-next-icon {
+  section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel .carousel-control-next .carousel-control-prev-icon,
+section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel .carousel-control-next .carousel-control-next-icon,
+section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel .carousel-control-prev .carousel-control-prev-icon,
+section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel .carousel-control-prev .carousel-control-next-icon {
     width: 20px;
     height: 20px;
   }
 
   section.shop .container .row .col-md-9 .row .card-wrap .card .overlay .mask .d-flex i {
     font-size: 30px;
-  }
-  section.shop .container .row .col-md-9 .modal .modal-dialog .modal-content .modal-body .row .left .carousel {
-    padding: 1.5rem 1.5rem 1.5rem 0.5rem;
-  }
-  section.shop .container .row .col-md-9 .modal .modal-dialog .modal-content .modal-body .row .left .carousel ol {
-    padding-right: 1rem;
   }
 }
 .body {

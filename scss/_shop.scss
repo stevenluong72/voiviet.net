@@ -31,9 +31,10 @@ section.hot-item {
               bottom: 42%;
               width: 8%;
               opacity: 1;
-              .carousel-control-prev-icon, .carousel-control-next-icon {
-                width:40px;
-                height:40px;
+              .carousel-control-prev-icon,
+              .carousel-control-next-icon {
+                width: 40px;
+                height: 40px;
               }
             }
             .carousel-indicators {
@@ -119,129 +120,133 @@ section.shop {
           .card-wrap {
             padding-left: 11px;
             padding-right: 11px;
-            .card {
-              height: 100%;
-              border-radius: unset;
-              border: none;
-              z-index: 100;
-              &:hover {
-                box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.5);
-              }
-              &:hover .mask {
-                opacity: 1;
-                transition: all 0.2s ease-in-out;
-              }
-              transition: all 0.2s ease-in-out;
-              transition-delay: 0.08s;
-              .overlay {
-                .mask {
-                  .d-flex {
-                    justify-content: space-evenly;
-                    i {
-                      cursor: pointer;
-                      font-size: 20px;
-                      color: #dcdcdc;
-                      &:hover {
-                        color: white;
-                      }
-                    }
-                  }
-                }
-              }
-              .card-body {
-                .card-text {
-                  color: #a20000;
-                  font-weight: bold;
-                }
-              }
-            }
           }
         }
       }
     }
-    .modal {
-      .modal-dialog {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        .modal-content {
-          .modal-body {
-            padding: 0;
-            .row {
-              .left {
-                .carousel {
-                  height: 100%;
-                  padding: 4.5rem 3.5rem;
-                  .carousel-indicators {
-                    margin-bottom: 0;
-                    padding-right: 2.5rem;
-                    li {
-                      img {
-                        outline: 0.1em solid #b9b9b9;
-                      }
-                    }
+  }
+}
+
+// Dùng cho cả home.html
+.card {
+  height: 100%;
+  border-radius: unset;
+  border: none;
+  z-index: 100;
+  &:hover {
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.5);
+  }
+  &:hover .mask {
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+  }
+  transition: all 0.2s ease-in-out;
+  transition-delay: 0.08s;
+  .overlay {
+    .mask {
+      .d-flex {
+        justify-content: space-evenly;
+        i {
+          cursor: pointer;
+          font-size: 20px;
+          color: #dcdcdc;
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .card-body {
+    .card-text {
+      color: #a20000;
+      font-weight: bold;
+    }
+  }
+}
+
+.modal {
+  .modal-dialog {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .modal-content {
+      .modal-body {
+        padding: 0;
+        .row {
+          .left {
+            .carousel {
+              height: 100%;
+              padding: 4.5rem 3.5rem;
+              .carousel-indicators {
+                margin-bottom: 0;
+                padding-right: 2.5rem;
+                li {
+                  img {
+                    outline: 0.1em solid #b9b9b9;
                   }
                 }
               }
-              .right {
-                padding-right: 0;
-                background-image: url("../images/shop_paper-background-modal.png");
-                background-size: cover;
-                .fa-times {
-                  top: 2%;
-                  right: 2%;
-                  font-size: 28px;
-                  color: #404040;
-                  &:hover {
-                    color: #A21616;
+            }
+          }
+          .right {
+            padding-right: 0;
+            background-image: url("../images/shop_paper-background-modal.png");
+            background-size: cover;
+            .fa-times {
+              top: 2%;
+              right: 2%;
+              font-size: 28px;
+              color: #404040;
+              &:hover {
+                color: #a21616;
+              }
+            }
+            .content-wrap {
+              padding-left: calc(3rem - 15px);
+              .product-name {
+                background: white;
+                display: inline-block;
+                padding: 1rem 1rem 1rem 2.5rem;
+                margin-left: -2.5rem;
+              }
+              table {
+                td {
+                  font-size: 1rem;
+                  padding-bottom: 10px;
+                  .decrease,
+                  .increase {
+                    border: none;
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    color: white;
+                    background-color: #a21616;
+                    border-radius: 4px;
+                    transform: translateY(1.5px);
+                  }
+                  .quantity {
+                    width: 44px;
+                    background-color: white;
+                    border-radius: 4px;
+                  }
+                  .price {
+                    color: #a21616;
+                    font-weight: bold;
+                    @include rfs(20);
                   }
                 }
-                .content-wrap {
-                  padding-left: calc(3rem - 15px);
-                  .product-name {
-                    background: white;
-                    display: inline-block;
-                    padding: 1rem 1rem 1rem 2.5rem;
-                    margin-left: -2.5rem;
-                  }
-                  table {
-                    td {
-                      font-size: 1rem;
-                      padding-bottom: 10px;
-                      .decrease, .increase {
-                        border: none;
-                        display: inline-block;
-                        width: 25px;
-                        height: 25px;
-                        color: white;
-                        background-color: #A21616;
-                        border-radius: 4px;
-                        transform: translateY(1.5px);
-                      }
-                      .quantity {
-                        width: 44px;
-                        background-color: white;
-                        border-radius: 4px;
-                      }
-                      .price {
-                        color: #A21616;
-                        font-weight: bold;
-                        @include rfs(20);
-                      }
-                    }
-                  }
+              }
 
-                  button.mua-ngay {
-                    background-color: #A21616;
-                    padding: 0.5rem 0.75rem;
-                    background: #A21C1C;
-                    border-radius: 4px;
-                    a {
-                      color: white;
-                      @include rfs(20);
-                      font-weight: bold;
-                    }
-                  }
+              button.mua-ngay {
+                background-color: #a21616;
+                padding: 0.125rem 0.5rem;
+                background: #a21c1c;
+                border-radius: 4px;
+                a {
+                  color: white;
+                  @include rfs(20);
+                  font-weight: bold;
                 }
               }
             }
@@ -251,6 +256,55 @@ section.shop {
     }
   }
 }
+
+@media (max-width: 991.98px) {
+  .modal {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
+          .row {
+            .left {
+              .carousel {
+                padding: 3.5rem 2.5rem;
+              }
+            }
+            .right {
+              .content-wrap {
+                .product-name {
+                  background-color: transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .modal {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
+          .row {
+            .left {
+              .carousel {
+                padding: 1.5rem 1.5rem 1.5rem 0.5rem;
+                ol {
+                  padding-right: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Hết Dùng cho cả home.html
+
 @media (max-width: 991.98px) {
   section.hot-item {
     .container {
@@ -261,7 +315,7 @@ section.shop {
               .carousel {
                 .carousel-inner {
                   .carousel-caption {
-                    padding: calc(0.25rem/3*2) calc(0.75rem/3*2);
+                    padding: calc(0.25rem / 3 * 2) calc(0.75rem / 3 * 2);
                     p {
                       @include rfs(16);
                     }
@@ -278,38 +332,7 @@ section.shop {
     .container {
       .row {
         .col-md-9 {
-          .modal {
-            .modal-dialog {
-              .modal-content {
-                .modal-body {
-                  .row {
-                    .left {
-                      .carousel {
-                        padding: 3.5rem 2.5rem;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      .modal {
-        .modal-dialog {
-          .modal-content {
-            .modal-body {
-              .row {
-                .right {
-                  .content-wrap {
-                    .product-name {
-                      background-color: transparent;
-                    }
-                  }
-                }
-              }
-            }
-          }
+
         }
       }
     }
@@ -366,10 +389,12 @@ section.shop {
                     height: 10px;
                   }
                 }
-                .carousel-control-next, .carousel-control-prev {
-                  .carousel-control-prev-icon, .carousel-control-next-icon {
-                    width:20px;
-                    height:20px;
+                .carousel-control-next,
+                .carousel-control-prev {
+                  .carousel-control-prev-icon,
+                  .carousel-control-next-icon {
+                    width: 20px;
+                    height: 20px;
                   }
                 }
               }
@@ -391,24 +416,6 @@ section.shop {
                     .d-flex {
                       i {
                         font-size: 30px;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-          .modal {
-            .modal-dialog {
-              .modal-content {
-                .modal-body {
-                  .row {
-                    .left {
-                      .carousel {
-                        padding: 1.5rem 1.5rem 1.5rem 0.5rem;
-                        ol {
-                          padding-right: 1rem;
-                        }
                       }
                     }
                   }
