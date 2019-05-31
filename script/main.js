@@ -347,7 +347,7 @@ for (let categories = 0; categories < warehouse.length; categories++) {
     str = `htmlContent_${categories} += '<div class="card-wrap col-lg-3 col-md-4 col-sm-6 col-12 mt-3">'`;
     eval(str);
 
-    str = `htmlContent_${categories} += '<div class="card">'`;
+    str = `htmlContent_${categories} += '<div class="card only">'`;
     eval(str);
 
     str = `htmlContent_${categories} += '<div class="view overlay">'`;
@@ -476,7 +476,7 @@ for (let categories = 0; categories < warehouse.length; categories++) {
 
   htmlContent_home +=
   `<div class="col-12 col-md-4">
-    <div class="card mb-2">
+    <div class="card only mb-2">
       <div class="view overlay">
         <img class="card-img-top" src="images/${rand.cardImg}" alt="Card image cap"/>
         <div class="mask flex-center" style="background: rgba(162,0,0,0.38);">

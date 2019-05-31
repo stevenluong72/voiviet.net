@@ -652,7 +652,7 @@ section.shop .container .row .col-md-9 .row .card-wrap {
   padding-right: 11px;
 }
 
-.card {
+.card.only {
   height: 100%;
   border-radius: unset;
   border: none;
@@ -660,25 +660,25 @@ section.shop .container .row .col-md-9 .row .card-wrap {
   transition: all 0.2s ease-in-out;
   transition-delay: 0.08s;
 }
-.card:hover {
+.card.only:hover {
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
-.card:hover .mask {
+.card.only:hover .mask {
   opacity: 1;
   transition: all 0.2s ease-in-out;
 }
-.card .overlay .mask .d-flex {
+.card.only .overlay .mask .d-flex {
   justify-content: space-evenly;
 }
-.card .overlay .mask .d-flex i {
+.card.only .overlay .mask .d-flex i {
   cursor: pointer;
   font-size: 20px;
   color: #dcdcdc;
 }
-.card .overlay .mask .d-flex i:hover {
+.card.only .overlay .mask .d-flex i:hover {
   color: white;
 }
-.card .card-body .card-text {
+.card.only .card-body .card-text {
   color: #a20000;
   font-weight: bold;
 }
