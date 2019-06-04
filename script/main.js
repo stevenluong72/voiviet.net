@@ -515,5 +515,39 @@ $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
   }
 });
 
+// Offset scroll to ID
+// $('body, html').animate({
+//   scrollTop: $('#tuongvoi').offset().top - 56
+// }, 1000);
 
+$('#list li .tuongvoi').click(function(e){
+  e.preventDefault();
+  $('body, html').animate({
+      scrollTop: $('#tuongvoi').offset().top - 70
+  }, 100);
+});
+$('#list li .quanao').click(function(e){
+  e.preventDefault();
+  $('body, html').animate({
+      scrollTop: $('#quanao').offset().top - 70
+  }, 100);
+});
+$('#list li .tranhanh').click(function(e){
+  e.preventDefault();
+  $('body, html').animate({
+      scrollTop: $('#tranhanh').offset().top - 70
+  }, 100);
+});
+$('#list li .trangsuc').click(function(e){
+  e.preventDefault();
+  $('body, html').animate({
+      scrollTop: $('#trangsuc').offset().top - 70
+  }, 100);
+});
+$('#list li .luuniem').click(function(e){
+  e.preventDefault();
+  $('body, html').animate({
+      scrollTop: $('#luuniem').offset().top - 70
+  }, 100);
+});
 // Swipe carousel for mobile - Fimlslittlehappy

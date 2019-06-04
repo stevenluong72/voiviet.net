@@ -22,6 +22,25 @@ header {
       }
     }
   }
+  .overlay {
+    .overlay-content {
+      a {
+        &:hover {
+          #strong {
+            display: inline;
+          }
+        }
+        #light {
+
+        }
+        #strong {
+          position: absolute;
+          display: none;
+
+        }
+      }
+    }
+  }
 }
 @media (max-width: 992px) {
   header {

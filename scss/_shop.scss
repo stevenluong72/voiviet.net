@@ -65,9 +65,7 @@ section.shop {
   .container {
     .row {
       .col-md-3 {
-        white-space: nowrap;
         ul {
-          overflow-x: auto;
           font-weight: bold;
           background-image: url("../images/shop-paper_background.png");
           background-size: cover;
@@ -89,6 +87,28 @@ section.shop {
         }
       }
       .col-md-9 {
+          ul {
+            white-space: nowrap;
+            overflow-x: auto;
+            font-weight: bold;
+            background-image: url("../images/shop-paper_background.png");
+            background-size: cover;
+            box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+            li {
+              padding-right: 1rem;
+              &:last-child a {
+                padding-bottom: 0;
+              }
+              a {
+                color: black;
+                padding: 0;
+              }
+              .active {
+                color: #a20000;
+              }
+            }
+          }
         .row {
           .underline {
             position: relative;
@@ -129,7 +149,7 @@ section.shop {
 
 // Dùng cho cả home.html
 .card.only {
-  height: 100%;
+  height: 350px;
   border-radius: unset;
   border: none;
   z-index: 100;
@@ -143,6 +163,15 @@ section.shop {
   transition: all 0.2s ease-in-out;
   transition-delay: 0.08s;
   .overlay {
+    height: 100%;
+    .card-img-top {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      height: auto;
+      width: auto;
+    }
     .mask {
       .d-flex {
         justify-content: space-evenly;
@@ -175,6 +204,7 @@ section.shop {
         padding: 0;
         .row {
           .left {
+            height: 500px;
             .carousel {
               height: 100%;
               padding: 4.5rem 3.5rem;
@@ -226,6 +256,7 @@ section.shop {
                     transform: translateY(1.5px);
                   }
                   .quantity {
+                    transform: translateY(1px);
                     width: 44px;
                     background-color: white;
                     border-radius: 4px;
@@ -328,15 +359,6 @@ section.shop {
       }
     }
   }
-  section.shop {
-    .container {
-      .row {
-        .col-md-9 {
-
-        }
-      }
-    }
-  }
 }
 @media (max-width: 767.98px) {
   section.hot-item {
@@ -346,22 +368,6 @@ section.shop {
           .col-md-8 {
             margin-left: 0;
             padding: 0 0 1rem !important;
-          }
-        }
-      }
-    }
-  }
-  section.shop {
-    .container {
-      .row {
-        .col-md-3 {
-          ul {
-            li {
-              padding-right: 1rem;
-              a {
-                padding-bottom: 0;
-              }
-            }
           }
         }
       }

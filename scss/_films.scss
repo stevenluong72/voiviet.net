@@ -55,17 +55,22 @@ section {
       z-index: 999;
       .carousel {
         .carousel-indicators {
+          left: 50%;
+          transform: translateX(-50%);
+          right: unset;
+          margin-left: 0;
+          margin-right: 0;
           .active {
-            background-color: white;
+            background: white;
           }
           li {
             height: 30px;
             border-radius: 50%;
-            border: 1px solid white;
+            border: 2px solid white;
             opacity: 1;
             background-color: transparent;
-            margin-left: 1%;
-            margin-right: 1%;
+            margin-left: 4px;
+            margin-right: 4px;
             margin-bottom: 10px;
           }
         }
@@ -101,6 +106,10 @@ section {
               left: 0;
             }
           }
+        }
+        .carousel-control-next, .carousel-control-prev {
+          top: 40%;
+          bottom: 40%;
         }
       }
     }
@@ -192,6 +201,7 @@ section {
         .carousel {
           .carousel-indicators {
             li {
+              border-width: 1px;
               height: 10px;
               width: 10px;
             }

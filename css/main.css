@@ -60,7 +60,7 @@ section.travel .container .row .col-12 .header p {
 section.travel .container .row .col-12 .header .line {
   width: calc((100% - 469px - 32px) / 2);
   height: 1px;
-  background-color: #a7a7a7;
+  background-color: #cacaca;
 }
 section.travel .container .row.where {
   font-family: Lora;
@@ -69,8 +69,8 @@ section.travel .container .row.where {
 section.travel .container .row.where .col-12 p {
   color: white;
   text-align: center;
-  left: 0;
-  right: 0;
+  left: 17px;
+  right: 17px;
 }
 section.travel .container .row.where .col-12 .p1 {
   font-size: 2.5rem;
@@ -87,13 +87,53 @@ section.travel .container .row.where .col-12 .p2 {
   top: 55.2%;
   line-height: 2;
 }
+section.travel .container .row.where .col-12 .p3 {
+  font-size: 2.5rem;
+  top: 35%;
+  line-height: 1.3;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+@media (max-width: 1200px) {
+  section.travel .container .row.where .col-12 .p3 {
+    font-size: calc(1.375rem + 1.5vw);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+section.travel .container .row.where .col-12 .p4 {
+  font-size: 0.8125rem;
+  top: 40%;
+  line-height: 2;
+  animation-duration: 5s;
+  animation-delay: 2.5s;
+}
 section.travel .container .row.where .col-12 button {
   font-size: 1rem;
   padding: 0.25rem 1rem;
   font-weight: bold;
   background-color: #d0021b !important;
   border-radius: 4px;
-  top: 88%;
+  top: 86%;
   left: 50%;
   transform: translateX(-50%);
   transition: all 0.2s;
@@ -119,10 +159,10 @@ section.shop .container .row .col-12 .carousel a.btn-floating {
   border-radius: unset;
 }
 section.shop .container .row .col-12 .carousel a.prev {
-  left: -50px;
+  left: -57px;
 }
 section.shop .container .row .col-12 .carousel a.next {
-  right: -50px;
+  right: -57px;
 }
 section.shop .container .row .col-12 div a button {
   font-size: 1rem;
@@ -153,6 +193,24 @@ section.shop .container .row .col-12 div a button {
     width: 8%;
     opacity: 0.35;
     transform: translateY(100%);
+  }
+
+  section.travel .container .row.where .col-12 .p2 {
+    font-size: 1.125rem;
+    top: 61.2%;
+    line-height: 1.5;
+  }
+  section.travel .container .row.where .col-12 button {
+    font-size: 0.8125rem;
+    padding: 0.1rem 0.75rem;
+  }
+}
+@media (max-width: 480px) {
+  section.travel .container .row.where .col-12 .p3 {
+    top: 30%;
+  }
+  section.travel .container .row.where .col-12 .p4 {
+    top: 30%;
   }
 }
 .section1 .container .row .col-12 .map {
@@ -369,17 +427,24 @@ section .container .bd-example {
   position: relative;
   z-index: 999;
 }
+section .container .bd-example .carousel .carousel-indicators {
+  left: 50%;
+  transform: translateX(-50%);
+  right: unset;
+  margin-left: 0;
+  margin-right: 0;
+}
 section .container .bd-example .carousel .carousel-indicators .active {
-  background-color: white;
+  background: white;
 }
 section .container .bd-example .carousel .carousel-indicators li {
   height: 30px;
   border-radius: 50%;
-  border: 1px solid white;
+  border: 2px solid white;
   opacity: 1;
   background-color: transparent;
-  margin-left: 1%;
-  margin-right: 1%;
+  margin-left: 4px;
+  margin-right: 4px;
   margin-bottom: 10px;
 }
 section .container .bd-example .carousel .carousel-inner .carousel-item .carousel-caption {
@@ -428,6 +493,10 @@ section .container .bd-example .carousel .carousel-inner .carousel-item .carouse
 section .container .bd-example .carousel .carousel-inner .carousel-item iframe {
   top: 0;
   left: 0;
+}
+section .container .bd-example .carousel .carousel-control-next, section .container .bd-example .carousel .carousel-control-prev {
+  top: 40%;
+  bottom: 40%;
 }
 
 @media (max-width: 992px) {
@@ -489,6 +558,7 @@ section .container .bd-example .carousel .carousel-inner .carousel-item iframe {
     font-size: 1rem;
   }
   section .container .bd-example .carousel .carousel-indicators li {
+    border-width: 1px;
     height: 10px;
     width: 10px;
   }
@@ -601,11 +671,7 @@ section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel-indic
 section.shop {
   font-family: "Lora", serif;
 }
-section.shop .container .row .col-md-3 {
-  white-space: nowrap;
-}
 section.shop .container .row .col-md-3 ul {
-  overflow-x: auto;
   font-weight: bold;
   background-image: url("../images/shop-paper_background.png");
   background-size: cover;
@@ -621,6 +687,28 @@ section.shop .container .row .col-md-3 ul li a {
   padding: 0 0 0.5rem 0;
 }
 section.shop .container .row .col-md-3 ul li .active {
+  color: #a20000;
+}
+section.shop .container .row .col-md-9 ul {
+  white-space: nowrap;
+  overflow-x: auto;
+  font-weight: bold;
+  background-image: url("../images/shop-paper_background.png");
+  background-size: cover;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+section.shop .container .row .col-md-9 ul li {
+  padding-right: 1rem;
+}
+section.shop .container .row .col-md-9 ul li:last-child a {
+  padding-bottom: 0;
+}
+section.shop .container .row .col-md-9 ul li a {
+  color: black;
+  padding: 0;
+}
+section.shop .container .row .col-md-9 ul li .active {
   color: #a20000;
 }
 section.shop .container .row .col-md-9 .row .underline {
@@ -653,7 +741,7 @@ section.shop .container .row .col-md-9 .row .card-wrap {
 }
 
 .card.only {
-  height: 100%;
+  height: 350px;
   border-radius: unset;
   border: none;
   z-index: 100;
@@ -666,6 +754,17 @@ section.shop .container .row .col-md-9 .row .card-wrap {
 .card.only:hover .mask {
   opacity: 1;
   transition: all 0.2s ease-in-out;
+}
+.card.only .overlay {
+  height: 100%;
+}
+.card.only .overlay .card-img-top {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: auto;
 }
 .card.only .overlay .mask .d-flex {
   justify-content: space-evenly;
@@ -690,6 +789,9 @@ section.shop .container .row .col-md-9 .row .card-wrap {
 }
 .modal .modal-dialog .modal-content .modal-body {
   padding: 0;
+}
+.modal .modal-dialog .modal-content .modal-body .row .left {
+  height: 500px;
 }
 .modal .modal-dialog .modal-content .modal-body .row .left .carousel {
   height: 100%;
@@ -741,6 +843,7 @@ section.shop .container .row .col-md-9 .row .card-wrap {
   transform: translateY(1.5px);
 }
 .modal .modal-dialog .modal-content .modal-body .row .right .content-wrap table td .quantity {
+  transform: translateY(1px);
   width: 44px;
   background-color: white;
   border-radius: 4px;
@@ -790,13 +893,6 @@ section.shop .container .row .col-md-9 .row .card-wrap {
   section.hot-item .container .row .col-12 .col-md-8 {
     margin-left: 0;
     padding: 0 0 1rem !important;
-  }
-
-  section.shop .container .row .col-md-3 ul li {
-    padding-right: 1rem;
-  }
-  section.shop .container .row .col-md-3 ul li a {
-    padding-bottom: 0;
   }
 }
 @media (max-width: 575.98px) {
@@ -860,6 +956,13 @@ header nav.navbar .menu-horizontal .navbar-nav .nav-item .nav-link {
 }
 header nav.navbar .menu-horizontal .navbar-nav .nav-item .nav-link:hover {
   color: white;
+}
+header .overlay .overlay-content a:hover #strong {
+  display: inline;
+}
+header .overlay .overlay-content a #strong {
+  position: absolute;
+  display: none;
 }
 
 @media (max-width: 992px) {
