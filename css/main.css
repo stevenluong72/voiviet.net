@@ -756,7 +756,7 @@ section.shop .container .row .col-md-9 .row .card-wrap {
   transition: all 0.2s ease-in-out;
 }
 .card.only .overlay {
-  height: 100%;
+  height: 60%;
 }
 .card.only .overlay .card-img-top {
   position: absolute;
@@ -776,6 +776,9 @@ section.shop .container .row .col-md-9 .row .card-wrap {
 }
 .card.only .overlay .mask .d-flex i:hover {
   color: white;
+}
+.card.only .card-body {
+  height: 40%;
 }
 .card.only .card-body .card-text {
   color: #a20000;

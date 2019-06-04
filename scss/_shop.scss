@@ -163,7 +163,7 @@ section.shop {
   transition: all 0.2s ease-in-out;
   transition-delay: 0.08s;
   .overlay {
-    height: 100%;
+    height: 60%;
     .card-img-top {
       position: absolute;
       top: 50%;
@@ -187,6 +187,7 @@ section.shop {
     }
   }
   .card-body {
+    height: 40%;
     .card-text {
       color: #a20000;
       font-weight: bold;
