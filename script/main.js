@@ -468,14 +468,14 @@ for (let categories = 0; categories < warehouse.length; categories++) {
   let products = Math.floor(Math.random() * warehouse[categories].length);
   let rand = warehouse[categories][products];
 
-  if (categories != 0) {
-    htmlContent_home += '<div class="carousel-item">';
-  } else {
-    htmlContent_home += '<div class="carousel-item active">';
-  }
+  // if (categories != 0) {
+  //   htmlContent_home += '<div class="carousel-item">';
+  // } else {
+  //   htmlContent_home += '<div class="carousel-item active">';
+  // }
 
   htmlContent_home +=
-  `<div class="col-12 col-md-4">
+  `
     <div class="card only mb-2">
       <div class="view overlay">
         <img class="card-img-top" src="images/${rand.cardImg}" alt="Card image cap"/>
@@ -494,32 +494,28 @@ for (let categories = 0; categories < warehouse.length; categories++) {
       </div> 
     </div> 
   </div>
-</div>`;
+`;
 }
-$("#carousel-inner-home").html(htmlContent_home);
+$("#carousel-home").html(htmlContent_home);
 
 // Section shop trang home.html
-$('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(':first');
-  }
-  next.children(':first-child').clone().appendTo($(this));
+// $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
+//   var next = $(this).next();
+//   if (!next.length) {
+//     next = $(this).siblings(':first');
+//   }
+//   next.children(':first-child').clone().appendTo($(this));
 
-  for (var i=0;i<4;i++) {
-    next=next.next();
-    if (!next.length) {
-      next=$(this).siblings(':first');
-    }
-    next.children(':first-child').clone().appendTo($(this));
-  }
-});
+//   for (var i=0;i<4;i++) {
+//     next=next.next();
+//     if (!next.length) {
+//       next=$(this).siblings(':first');
+//     }
+//     next.children(':first-child').clone().appendTo($(this));
+//   }
+// });
 
 // Offset scroll to ID
-// $('body, html').animate({
-//   scrollTop: $('#tuongvoi').offset().top - 56
-// }, 1000);
-
 $('#list li .tuongvoi').click(function(e){
   e.preventDefault();
   $('body, html').animate({
@@ -550,4 +546,5 @@ $('#list li .luuniem').click(function(e){
       scrollTop: $('#luuniem').offset().top - 70
   }, 100);
 });
+
 // Swipe carousel for mobile - Fimlslittlehappy

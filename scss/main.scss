@@ -1,16 +1,14 @@
 // Import fonts
 @font-face {
-  font-family: 'Chalkduster';
-  src:url('fonts/Chalkduster.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
+  font-family: myfirstfont;
+  src: url('../fonts/Chalkduster.ttf');
 }
 
 @import url('https://fonts.googleapis.com/css?family=Cormorant');
 @import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
 
 // RFS
-@import "../rfs/rfs.scss";
+@import "core/bootstrap/rfs";
 
 // Additional Reset CSS & Global CSS
 html {

@@ -2,10 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Cormorant");
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i");
 @font-face {
-  font-family: "Chalkduster";
-  src: url("fonts/Chalkduster.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
+  font-family: myfirstfont;
+  src: url("../fonts/Chalkduster.ttf");
 }
 html {
   overflow-x: hidden;
@@ -147,10 +145,32 @@ section.film .container .row .col-12 .header .line {
 section.shop .container .row .col-12 .header .line {
   width: calc((100% - 365px - 32px) / 2);
 }
-section.shop .container .row .col-12 .carousel {
+section.shop #carousel-home {
   z-index: 1000;
+  margin-left: 7%;
+  margin-right: 7%;
 }
-section.shop .container .row .col-12 .carousel a.btn-floating {
+section.shop #carousel-home .slider {
+  margin: 100px auto;
+}
+section.shop #carousel-home .slick-slide {
+  margin: 0px 20px;
+}
+section.shop #carousel-home .slick-prev:before,
+section.shop #carousel-home .slick-next:before {
+  color: black;
+}
+section.shop #carousel-home .slick-slide {
+  transition: all ease-in-out 0.3s;
+  opacity: 1;
+}
+section.shop #carousel-home .slick-active {
+  opacity: 1;
+}
+section.shop #carousel-home .slick-current {
+  opacity: 1;
+}
+section.shop #carousel-home a.btn-floating {
   position: absolute;
   top: 42%;
   transform: translateY(-50%);
@@ -158,13 +178,13 @@ section.shop .container .row .col-12 .carousel a.btn-floating {
   background-color: rgba(0, 0, 0, 0.41);
   border-radius: unset;
 }
-section.shop .container .row .col-12 .carousel a.prev {
+section.shop #carousel-home a.prev {
   left: -57px;
 }
-section.shop .container .row .col-12 .carousel a.next {
+section.shop #carousel-home a.next {
   right: -57px;
 }
-section.shop .container .row .col-12 div a button {
+section.shop div a button {
   font-size: 1rem;
   font-weight: bold;
   background-color: #d0021b !important;
@@ -375,7 +395,7 @@ section.shop .container .row .col-12 div a button {
   }
 }
 header p.header-content {
-  font-family: Chalkduster;
+  font-family: myfirstfont;
   color: white;
   font-size: 3.125rem;
   text-align: center;
@@ -995,7 +1015,7 @@ nav .overlay {
   width: 0;
   position: fixed;
   /* Stay in place */
-  z-index: 1000;
+  z-index: 1050;
   /* Sit on top */
   right: 0;
   top: 0;
