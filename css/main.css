@@ -146,7 +146,7 @@ section.shop .container .row .col-12 .header .line {
   width: calc((100% - 365px - 32px) / 2);
 }
 section.shop #carousel-home {
-  z-index: 1000;
+  z-index: 1;
   margin-left: 7%;
   margin-right: 7%;
 }
@@ -326,7 +326,7 @@ section.shop div a button {
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 .section2 .container .row .card .card-img-top {
-  z-index: 100;
+  z-index: 1;
 }
 .section2 .container .row .card .card-title {
   font-weight: bold;
@@ -334,7 +334,7 @@ section.shop div a button {
 .section2 .container .row .card a.btn {
   font-weight: bold;
   width: 100%;
-  z-index: 100;
+  z-index: 1;
   border: none;
 }
 .section2 .container .row .card a.btn-danger {
@@ -445,7 +445,7 @@ section .container .row div .line-wrap .arrow-left {
 }
 section .container .bd-example {
   position: relative;
-  z-index: 999;
+  z-index: 1;
 }
 section .container .bd-example .carousel .carousel-indicators {
   left: 50%;
@@ -515,6 +515,7 @@ section .container .bd-example .carousel .carousel-inner .carousel-item iframe {
   left: 0;
 }
 section .container .bd-example .carousel .carousel-control-next, section .container .bd-example .carousel .carousel-control-prev {
+  z-index: 1;
   top: 40%;
   bottom: 40%;
 }
@@ -710,6 +711,7 @@ section.shop .container .row .col-md-3 ul li .active {
   color: #a20000;
 }
 section.shop .container .row .col-md-9 ul {
+  z-index: 1;
   white-space: nowrap;
   overflow-x: auto;
   font-weight: bold;
@@ -764,7 +766,6 @@ section.shop .container .row .col-md-9 .row .card-wrap {
   height: 350px;
   border-radius: unset;
   border: none;
-  z-index: 100;
   transition: all 0.2s ease-in-out;
   transition-delay: 0.08s;
 }
@@ -1179,6 +1180,10 @@ footer .container ul.footer-menu li::after {
 }
 footer .container ul.footer-menu li:last-child::after {
   content: "";
+}
+
+#footer-shop img.footer-img-right {
+  display: none;
 }
 
 @media (max-width: 992px) {

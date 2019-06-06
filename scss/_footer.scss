@@ -49,7 +49,11 @@ footer {
     }
   }
 }
-
+#footer-shop {
+  img.footer-img-right {
+    display: none;
+  }
+}
 @media (max-width: 992px) {
   footer {
     img.footer-logo {

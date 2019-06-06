@@ -52,7 +52,7 @@ section {
     }
     .bd-example {
       position: relative;
-      z-index: 999;
+      z-index: 1;
       .carousel {
         .carousel-indicators {
           left: 50%;
@@ -108,6 +108,7 @@ section {
           }
         }
         .carousel-control-next, .carousel-control-prev {
+          z-index: 1;
           top: 40%;
           bottom: 40%;
         }
