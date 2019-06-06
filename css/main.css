@@ -998,7 +998,7 @@ header .overlay .overlay-content a #strong {
 }
 @media (max-width: 576px) {
   header nav a img.logo-header {
-    display: none;
+    width: 50%;
   }
 }
 nav {
@@ -1012,13 +1012,15 @@ nav {
 nav .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */
   height: 100%;
-  width: 0;
+  width: 100%;
   position: fixed;
   /* Stay in place */
   z-index: 1050;
   /* Sit on top */
   right: 0;
   top: 0;
+  opacity: 0;
+  transform: translateX(95%);
   background-color: black;
   /* Black fallback color */
   background-color: rgba(0, 0, 0, 0.9);
@@ -1087,7 +1089,7 @@ header nav span {
   font-size: 1.5rem;
   position: absolute;
   right: 5%;
-  top: 5%;
+  top: 10%;
   color: #bbbbbb;
 }
 @media (max-width: 1200px) {
@@ -1097,6 +1099,10 @@ header nav span {
 }
 header nav span:hover, header nav span:focus {
   color: #f1f1f1;
+}
+
+#header-home nav span {
+  top: 4%;
 }
 
 @media (min-width: 992px) {

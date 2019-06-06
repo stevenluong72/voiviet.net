@@ -27,13 +27,58 @@ $(function() {
 // Curtain menu
 /* Open when someone clicks on the span element */
 function openNav() {
-  document.getElementById("myNav").style.width = "100%";
+  document.getElementById("myNav").style.transform = "translateX(0)";
 }
+$( window ).on( "load", function() {
+  $(function() {
+    //Enable swiping...
+    $("#myNav").swipe( {
+      //Single swipe handler for left swipes
+      swipeLeft:function(event, direction, distance, duration, fingerCount) {
+        // $(this).text("I'm good");  
+        // $(this).css('background-color', 'red'); 
+        $(this).css('transform', 'translateX(0)'); 
+        $(this).css('opacity', '1'); 
+      },
+      //Default is 75px, set to 0 for demo so any distance triggers swipe
+      threshold:0
+    });
+  }); 
+});
 
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
+  document.getElementById("myNav").style.transform = "translateX(100%)";
 }
+$( window ).on( "load", function() {
+  $(function() {
+    //Enable swiping...
+    $("#myNav").swipe( {
+      //Single swipe handler for left swipes
+      swipeRight:function(event, direction, distance, duration, fingerCount) {
+        // $(this).text("I'm good");  
+        // $(this).css('background-color', 'red'); 
+        $(this).css('transform', 'translateX(95%)'); 
+        $(this).css('opacity', '0.5'); 
+      },
+      //Default is 75px, set to 0 for demo so any distance triggers swipe
+      threshold:0
+    });
+  }); 
+});
+
+// $( window ).on( "load", function() {
+//   //Enable swiping...
+//   $("#myNav").swipe( {
+//     //Generic swipe handler for all directions
+//     swipe:function(event, direction, distance, duration, fingerCount) {
+//       $(this).css('transform', 'translateX(95%)');
+//       console.log('OK');
+//     },
+//     //Default is 75px, set to 0 for demo so any distance triggers swipe
+//      threshold:0
+//   });
+// });
 // End curtain menu
 
 // Số lương - 1 +

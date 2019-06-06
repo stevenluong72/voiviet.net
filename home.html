@@ -32,7 +32,7 @@
   </head>
 
   <body>
-    <header class="container-fluid p-0 position-relative text-uppercase" style="height: 100vh; background-size: cover; background-image: url('images/home_banner.png'); background-position-x: center;">
+    <header id="header-home" class="container-fluid p-0 position-relative text-uppercase" style="height: 100vh; background-size: cover; background-image: url('images/home_banner.png'); background-position-x: center;">
       <!-- <img
         class="banner w-100"
         src="images/home_banner.png"
@@ -40,7 +40,7 @@
       /> -->
       <nav></nav>
     </header>
-
+    <div id="test" style="width:200px; height: 200px; border: 1px solid black">Only left</div>
     <section class="welcome my-md-5 my-3">
       <div class=" wrap position-relative text-center">
         <p class="position-absolute">
@@ -156,14 +156,14 @@
           </div>
         </div>
         <div class="row my-3">
-          <div class="col-md-6 col-12 mb-3">
+          <div class="col-md-6 col-12 mb-3 text-center">
             <a href="films.html">
-              <img src="images/home_film-tyke.png" alt="home_film-tyke" />
+              <img style="max-height: 100vh" src="images/home_film-tyke.png" alt="home_film-tyke" />
             </a>
           </div>
-          <div class="col-md-6 col-12">
+          <div class="col-md-6 col-12 text-center">
             <a href="films.html">
-              <img src="images/home_film-love.png" alt="home_film-love" />
+              <img style="max-height: 100vh" src="images/home_film-love.png" alt="home_film-love" />
             </a>
           </div>
         </div>
@@ -371,6 +371,7 @@
       integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.js"></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js"
