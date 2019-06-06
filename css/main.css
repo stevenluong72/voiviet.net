@@ -997,8 +997,13 @@ header .overlay .overlay-content a #strong {
   }
 }
 @media (max-width: 576px) {
-  header nav a img.logo-header {
+  #header-home nav a img.logo-header {
     width: 50%;
+    display: inline;
+  }
+
+  header nav a img.logo-header {
+    display: none;
   }
 }
 nav {
@@ -1015,12 +1020,12 @@ nav .overlay {
   width: 100%;
   position: fixed;
   /* Stay in place */
-  z-index: 1050;
+  z-index: 1;
   /* Sit on top */
   right: 0;
   top: 0;
   opacity: 0;
-  transform: translateX(95%);
+  transform: translateX(85%);
   background-color: black;
   /* Black fallback color */
   background-color: rgba(0, 0, 0, 0.9);
@@ -1032,6 +1037,23 @@ nav .overlay {
   display: flex;
   align-items: center;
 }
+@keyframes swipe {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(85%);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+nav .animation-swipe {
+  animation: 1.5s swipe;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
 nav .overlay-content {
   width: 100%;
   /* 100% width */
@@ -1039,6 +1061,8 @@ nav .overlay-content {
   /* Centered text/links */
 }
 nav .overlay a {
+  margin-left: 20%;
+  margin-right: 20%;
   padding: 8px;
   text-decoration: none;
   font-size: 2.25rem;
@@ -1058,6 +1082,7 @@ nav .overlay a:focus {
   color: #f1f1f1;
 }
 nav .overlay .closebtn {
+  margin: 0;
   position: absolute;
   top: 20px;
   right: 45px;
@@ -1086,6 +1111,7 @@ nav .overlay .closebtn {
 
 /* Chỉnh lại position của nút <span> */
 header nav span {
+  z-index: 2;
   font-size: 1.5rem;
   position: absolute;
   right: 5%;

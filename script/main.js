@@ -28,6 +28,10 @@ $(function() {
 /* Open when someone clicks on the span element */
 function openNav() {
   document.getElementById("myNav").style.transform = "translateX(0)";
+  document.getElementById("myNav").style.opacity = "1";
+  $("#myNav").removeClass('animation-swipe');
+  $("#myNav").css('z-index', '1050');
+  // $('header nav span').css('z-index', 'unset');
 }
 $( window ).on( "load", function() {
   $(function() {
@@ -35,20 +39,25 @@ $( window ).on( "load", function() {
     $("#myNav").swipe( {
       //Single swipe handler for left swipes
       swipeLeft:function(event, direction, distance, duration, fingerCount) {
-        // $(this).text("I'm good");  
-        // $(this).css('background-color', 'red'); 
+        // $('header nav span').css('z-index', 'unset');
+        $(this).css('z-index', '1050');
         $(this).css('transform', 'translateX(0)'); 
-        $(this).css('opacity', '1'); 
+        $(this).css('opacity', '1');
+        $(this).removeClass('animation-swipe');
       },
       //Default is 75px, set to 0 for demo so any distance triggers swipe
-      threshold:0
+      // threshold:0
     });
   }); 
 });
 
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
-  document.getElementById("myNav").style.transform = "translateX(100%)";
+  document.getElementById("myNav").style.transform = "translateX(85%)";
+  document.getElementById("myNav").style.opacity = "0";
+  // $('header nav span').css('z-index', '1051')
+  $("#myNav").css('z-index', '1');
+  $("#myNav").addClass('animation-swipe');
 }
 $( window ).on( "load", function() {
   $(function() {
@@ -56,29 +65,18 @@ $( window ).on( "load", function() {
     $("#myNav").swipe( {
       //Single swipe handler for left swipes
       swipeRight:function(event, direction, distance, duration, fingerCount) {
-        // $(this).text("I'm good");  
-        // $(this).css('background-color', 'red'); 
-        $(this).css('transform', 'translateX(95%)'); 
-        $(this).css('opacity', '0.5'); 
+        // $('header nav span').css('z-index', '1051');
+        $(this).css('z-index', '1');
+        $(this).addClass('animation-swipe');
+        $(this).css('transform', 'translateX(85%)'); 
+        $(this).css('opacity', '0'); 
       },
       //Default is 75px, set to 0 for demo so any distance triggers swipe
-      threshold:0
+      // threshold:0
     });
   }); 
 });
 
-// $( window ).on( "load", function() {
-//   //Enable swiping...
-//   $("#myNav").swipe( {
-//     //Generic swipe handler for all directions
-//     swipe:function(event, direction, distance, duration, fingerCount) {
-//       $(this).css('transform', 'translateX(95%)');
-//       console.log('OK');
-//     },
-//     //Default is 75px, set to 0 for demo so any distance triggers swipe
-//      threshold:0
-//   });
-// });
 // End curtain menu
 
 // Số lương - 1 +

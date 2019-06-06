@@ -57,16 +57,27 @@ header {
   }
 }
 @media (max-width: 576px) {
-  header {
+  #header-home {
     nav {
       a {
         img.logo-header {
           width: 50%;
+          display: inline;
+        }
+      }
+    }
+  }
+  header {
+    nav {
+      a {
+        img.logo-header {
+          display: none;
         }
       }
     }
   }
 }
+
 nav {
   // Curtain menu
   /* The Overlay (background) */
@@ -75,19 +86,38 @@ nav {
     height: 100%;
     width: 100%;
     position: fixed; /* Stay in place */
-    z-index: 1050; /* Sit on top */
+    z-index: 1; /* Sit on top */
     right: 0;
     top: 0;
     opacity: 0;
-    transform: translateX(95%);
+    transform: translateX(85%);
     background-color: rgb(0, 0, 0); /* Black fallback color */
     background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
     display: flex;
     align-items: center;
-  }
+    @keyframes swipe {
+      0% {
+        opacity: 1;
+        transform: translateX(0);
+      }
 
+      50% {
+        opacity: 0.5;
+        transform: translateX(85%);
+      }
+
+      100% {
+        opacity: 0;
+      }
+      
+    }
+  }
+  .animation-swipe {
+    animation: 1.5s swipe;
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
   /* Position the content inside the overlay */
   .overlay-content {
     width: 100%; /* 100% width */
@@ -97,6 +127,8 @@ nav {
 
   /* The navigation links inside the overlay */
   .overlay a {
+    margin-left: 20%;
+    margin-right: 20%;
     padding: 8px;
     text-decoration: none;
     @include rfs(36);
@@ -113,6 +145,7 @@ nav {
 
   /* Position the close button (top right corner) */
   .overlay .closebtn {
+    margin: 0;
     position: absolute;
     top: 20px;
     right: 45px;
@@ -135,6 +168,7 @@ nav {
 header {
   nav {
     span {
+      z-index: 2;
       @include rfs(24);
       position: absolute;
       right: 5%;
