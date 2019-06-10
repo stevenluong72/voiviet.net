@@ -2,6 +2,14 @@ body {
   background-color: #f6f6f6;
 }
 
+#header-home { 
+  background-attachment: fixed; 
+  background-size: cover; 
+  background-image: url('../images/Elephant-Young-Elephant-Young-Animal-Watering-Hole-2380009.jpg'); 
+  background-position-x: center; 
+  background-position-y: center;
+}
+
 section.welcome {
   .wrap {
     p {
@@ -56,18 +64,13 @@ section.travel {
           @include rfs(40);
           top: 35%;
           line-height: 1.3;
-          animation-duration: 5s;
-          animation-timing-function: linear;
+          animation: fadeInUp1 7s infinite;
         }
-        @keyframes fadeInUp {
+        @keyframes fadeInUp1 {
           0% {
             opacity: 0;
-            -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
-          }
-
-          25% {
-            opacity: 1;
+            -webkit-transform: translate3d(0, 50%, 0);
+            transform: translate3d(0, 50%, 0);
           }
 
           50% {
@@ -75,21 +78,36 @@ section.travel {
             -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
           }
-          
-          75% {
-            opacity: 0;
-          }
 
           100% {
             opacity: 0;
+          }
+        }
+
+        @keyframes fadeInUp2 {
+          0% {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+          }
+
+          50% {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+          }
+
+          100% {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
           }
         }
         .p4 {
           @include rfs(13);
           top: 40%;
           line-height: 2;
-          animation-duration: 5s;
-          animation-delay: 2.5s;
+          animation: fadeInUp2 7s infinite;
         }
         button {
           @include rfs(16);
@@ -106,6 +124,36 @@ section.travel {
       }
     }
   }
+}
+
+// CSS Hover effect Slide button - Universal
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn-1e:after {
+  width: 100%;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.btn-1e:hover:after {
+  height: 330%;
+  opacity: 1;
+}
+.btn-1e:hover, .btn-1e:active {
+  color: #d0021b;
+  border: 1px solid #d0021b;
 }
 
 section.film {
@@ -219,12 +267,25 @@ section.shop {
     .wrap {
       p {
         position: unset !important;
-        margin-bottom: -7%;
       }
       .sun {
         width: 8%;
         opacity: 0.35;
-        transform: translateY(100%);
+        position: absolute;
+        left: 47%;
+      }
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+        }
+      
+        to {
+          opacity: 0.35;
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
       }
     }
   }
@@ -261,6 +322,16 @@ section.shop {
         }
       }
     }
+  }
+
+  .slick-arrow {
+    display: none !important;
+  }
+}
+
+@media (max-height: 800px) {
+  #header-home {
+    background-position-y: 90%;
   }
 }
 

@@ -32,24 +32,28 @@
   </head>
 
   <body>
-    <header id="header-home" class="container-fluid p-0 position-relative text-uppercase" style="height: 100vh; background-size: cover; background-image: url('images/home_banner.png'); background-position-x: center;">
-      <!-- <img
-        class="banner w-100"
-        src="images/home_banner.png"
-        alt="home_banner"
-      /> -->
+    <header
+      id="header-home"
+      class="container-fluid p-0 position-relative text-uppercase" style="height: 100vh"
+    >
       <nav></nav>
     </header>
     <section class="welcome my-md-5 my-3">
       <div class=" wrap position-relative text-center">
         <p class="position-absolute">
-          CHÂN THÀNH
+          <span>CHÂN THÀNH</span>
+          
           <span style="color: rgb(208, 2, 27,0.69)">CẢM ƠN BẠN</span>
           <br />
-          VÌ SỰ QUAN TÂM
+          <span>VÌ SỰ QUAN TÂM</span>
+          
           <span style="color: rgb(208, 2, 27,0.69)">TỚI LOÀI VOI</span>
         </p>
-        <img class="sun d-lg-none" src="images/home_sun.png" alt="home_sun" />
+        <img
+          class="sun d-lg-none wow fadeInDown animated" data-wow-delay="0.5s"
+          src="images/home_sun.png"
+          alt="home_sun"
+        />
         <img src="images/home_welcome.png" alt="home_welcome" />
       </div>
     </section>
@@ -80,20 +84,16 @@
               LẦN ĐẦU TIÊN TẠI VIỆT NAM
               <br />MỘT MÔ HÌNH DU LỊCH THÂN THIỆN VỚI VOI
             </p>
-            <p
-              class="position-absolute p3 d-md-none d-block animated slow infinite fadeInUp"
-            >
+            <p class="position-absolute p3 d-md-none d-block wow">
               VƯỜN QUỐC GIA <br />YOK DON
             </p>
-            <p
-              class="position-absolute p4 d-md-none d-block animated slow infinite fadeInUp"
-            >
+            <p class="position-absolute p4 d-md-none d-block wow">
               LẦN ĐẦU TIÊN TẠI VIỆT NAM
               <br />MỘT MÔ HÌNH DU LỊCH THÂN THIỆN VỚI VOI
             </p>
             <a href="tours.html">
               <button
-                class="btn btn-danger position-absolute waves-effect waves-light"
+                class="btn btn-1e btn-danger position-absolute waves-effect waves-light"
               >
                 TÌM HIỂU THÊM
               </button>
@@ -115,20 +115,16 @@
               ĐẦU TIÊN VÀ TỐT NHẤT TẠI THÁI LAN <br />
               VƯƠNG QUỐC CỦA GẦN 100 CON VOI, 300 CON CHÓ, 400 CON MÈO, ...
             </p>
-            <p
-              class="position-absolute p3 d-md-none d-block animated slow infinite fadeInUp"
-            >
+            <p class="position-absolute p3 d-md-none d-block wow">
               ELEPHANT<br />NATURE PARK
             </p>
-            <p
-              class="position-absolute p4 d-md-none d-block animated slow infinite fadeInUp"
-            >
+            <p class="position-absolute p4 d-md-none d-block wow">
               ĐẦU TIÊN VÀ TỐT NHẤT TẠI THÁI LAN <br />
               VƯƠNG QUỐC CỦA GẦN 100 CON VOI, 300 CON CHÓ, 400 CON MÈO, ...
             </p>
             <a href="tours.html">
               <button
-                class="btn btn-danger position-absolute waves-effect waves-light"
+                class="btn btn-1e btn-danger position-absolute waves-effect waves-light"
               >
                 TÌM HIỂU THÊM
               </button>
@@ -157,12 +153,20 @@
         <div class="row my-3">
           <div class="col-md-6 col-12 mb-3 text-center">
             <a href="films.html">
-              <img style="max-height: 100vh" src="images/home_film-tyke.png" alt="home_film-tyke" />
+              <img
+                style="max-height: 100vh"
+                src="images/home_film-tyke.png"
+                alt="home_film-tyke"
+              />
             </a>
           </div>
           <div class="col-md-6 col-12 text-center">
             <a href="films.html">
-              <img style="max-height: 100vh" src="images/home_film-love.png" alt="home_film-love" />
+              <img
+                style="max-height: 100vh"
+                src="images/home_film-love.png"
+                alt="home_film-love"
+              />
             </a>
           </div>
         </div>
@@ -189,7 +193,7 @@
       <section id="carousel-home" class="center"></section>
       <div class="text-center">
         <a href="shop.html" class="d-inline-block">
-          <button class="btn btn-danger">XEM TẤT CẢ</button>
+          <button class="btn btn-1e btn-danger waves-effect waves-light" style="z-index: 0; border: 1px solid transparent">XEM TẤT CẢ</button>
         </a>
       </div>
       <!-- Modal: modalQuickView -->
@@ -376,6 +380,10 @@
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js"
     ></script>
     <script src="script/mdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <script src="script/main.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
@@ -398,7 +406,7 @@
             {
               breakpoint: 992,
               settings: {
-                slidesToShow: 2,
+                slidesToShow: 2
               }
             },
             {

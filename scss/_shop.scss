@@ -210,7 +210,7 @@ section.shop {
             .carousel {
               height: 100%;
               padding: 4.5rem 3.5rem;
-              .carousel-indicators {
+              ol {
                 margin-bottom: 0;
                 padding-right: 2.5rem;
                 li {
@@ -227,7 +227,7 @@ section.shop {
             background-size: cover;
             .fa-times {
               top: 2%;
-              right: 2%;
+              right: 3%;
               font-size: 28px;
               color: #404040;
               &:hover {
@@ -322,6 +322,7 @@ section.shop {
         .modal-body {
           .row {
             .left {
+              height: auto;
               .carousel {
                 padding: 1.5rem 1.5rem 1.5rem 0.5rem;
                 ol {

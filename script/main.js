@@ -3,17 +3,20 @@
 // Ko nên xài CDN, nên down về up lên
 
 $(function() {
+  // Favicon
+  $("head").append('<link rel="shortcut icon" type="image/png" href="images/favicon2.png"/>');
   // Font Awesome
   $("head").append(
     '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">'
   );
+
   // bootstrap
   $("head").append('<link href="css/bootstrap.min.css" rel="stylesheet">');
+  
   // Material Design Bootstrap
   $("head#shop-html").append('<link href="css/compiled-4.8.2.min.css" rel="stylesheet">');
   $("head#home-html").append('<link href="css/compiled-4.8.2.min.css" rel="stylesheet">');
-  // Animate.css
-  $("head#home-html").append('<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.1/animate.min.css" rel="stylesheet">');
+    
   // File main.css
   $("head").append('<link rel="stylesheet" href="css/main.css" />');
 });
@@ -590,4 +593,3 @@ $('#list li .luuniem').click(function(e){
   }, 100);
 });
 
-// Swipe carousel for mobile - Fimlslittlehappy
