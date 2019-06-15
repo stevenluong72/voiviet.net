@@ -301,6 +301,7 @@ section.shop div a button {
 @media (max-height: 800px) {
   #header-home {
     background-position-y: 90%;
+    background-attachment: unset;
   }
 }
 .section1 .container .row .col-12 .map {

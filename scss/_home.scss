@@ -332,6 +332,7 @@ section.shop {
 @media (max-height: 800px) {
   #header-home {
     background-position-y: 90%;
+    background-attachment: unset;
   }
 }
 
