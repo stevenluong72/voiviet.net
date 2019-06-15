@@ -404,7 +404,6 @@ section.shop div a button {
 .section2 .container .row .card a.btn {
   font-weight: bold;
   width: 100%;
-  z-index: 1;
   border: none;
 }
 .section2 .container .row .card a.btn-danger {
@@ -1041,11 +1040,30 @@ section.hot-item .container .row .col-12 .col-md-8 .bd-example-2 .carousel .caro
 }
 
 header nav.navbar {
+  font-family: Lora;
+  font-weight: bold;
   box-shadow: none !important;
   top: 0;
 }
+header nav.navbar .mask {
+  height: 200%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(black, transparent);
+  opacity: 0.5;
+}
+header nav.navbar a.navbar-brand {
+  z-index: 0;
+}
 header nav.navbar a.navbar-brand img {
   height: auto;
+}
+header nav.navbar .menu-horizontal {
+  z-index: 0;
 }
 header nav.navbar .menu-horizontal .navbar-nav .nav-item .nav-link {
   color: #d6d6d6;
@@ -1225,6 +1243,7 @@ footer img.footer-img {
   position: absolute;
   max-width: unset;
   max-height: unset;
+  pointer-events: none;
 }
 footer img.footer-img-right {
   transform: scale(0.5);

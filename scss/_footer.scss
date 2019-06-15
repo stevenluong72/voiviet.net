@@ -12,6 +12,7 @@ footer {
     position: absolute;
     max-width: unset;
     max-height: unset;
+    pointer-events: none;
     // z-index: -1;
   }
   img.footer-img-right {

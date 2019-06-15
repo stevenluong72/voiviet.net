@@ -1,14 +1,29 @@
 // Header
 header {
   nav.navbar {
+    font-family: Lora;
+    font-weight: bold;
     box-shadow: none!important;
     top: 0;
+    .mask {
+      height: 200%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(black, transparent);
+      opacity: 0.5;
+    }
     a.navbar-brand {
+      z-index: 0;
       img {
         height: auto;
       }
     }
     .menu-horizontal {
+      z-index: 0;
       .navbar-nav {
         .nav-item {
           .nav-link {
