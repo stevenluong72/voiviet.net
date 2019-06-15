@@ -286,6 +286,11 @@ section.shop div a button {
     padding: 0.1rem 0.75rem;
   }
 }
+@media (max-width: 768px) {
+  #header-home {
+    background-attachment: unset;
+  }
+}
 @media (max-width: 480px) {
   section.travel .container .row.where .col-12 .p3 {
     top: 30%;
@@ -301,7 +306,6 @@ section.shop div a button {
 @media (max-height: 800px) {
   #header-home {
     background-position-y: 90%;
-    background-attachment: unset;
   }
 }
 .section1 .container .row .col-12 .map {

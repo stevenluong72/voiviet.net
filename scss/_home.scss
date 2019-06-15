@@ -308,6 +308,12 @@ section.shop {
   }
 }
 
+@media (max-width: 768px) {
+  #header-home {
+    background-attachment: unset;
+  }
+}
+
 @media (max-width: 480px) {
   section.travel {
     .container {
@@ -332,7 +338,6 @@ section.shop {
 @media (max-height: 800px) {
   #header-home {
     background-position-y: 90%;
-    background-attachment: unset;
   }
 }
 
